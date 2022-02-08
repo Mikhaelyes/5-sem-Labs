@@ -1,0 +1,214 @@
+%класс документа, А4, шрифт
+\documentclass[reprint, amsmath, amssymb, aps,]{revtex4-2}
+
+\usepackage[T2A]{fontenc} %кодировка
+\usepackage[utf8]{inputenc} %кодировка исходного текста
+\usepackage[english, russian]{babel} %локализация и переносы
+
+%математика
+\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools}
+
+%графика
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{wrapfig} %обтекание фигур
+
+\usepackage{multirow}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+
+\begin{document}
+\title{Лабораторная работа 4.3:\\Измерение абсолютной активности препарата $Co^{60}$ методом $\gamma - \gamma$ совпадений}
+
+
+
+\author{Васильев Михаил Владимирович}
+\affiliation{%
+ Студент 3 курса РТ\\
+}%
+
+\collaboration{Московский физико-технический институт}%\noaffiliation
+
+\date{16 сентября 2021 г.}% It is always \today, today,
+             %  but any date may be explicitly specified
+             
+
+\begin{abstract}
+\textbf{В работе исследуются:} абсолютная активность радиоактивного препарата $Co^{60}$ с использованием каскадного перехода $\gamma$ квантов при его распаде.
+\begin{description}
+\item[Оборудование]
+высоковольтный стабилизированный выпрямитель, сцинтиллятор, кристалл йодистого натрия NaI(Ti), формирователь импульсов, схема совпадений, пересчётный прибор, образец $Co^{60}$
+\end{description}
+\end{abstract}
+
+\maketitle
+
+
+\section{Теория}
+
+
+Полное число распадов ядер радиоактивного препарата в единицу
+времени называется абсолютной активностью. Если известно коли-
+чество радиоактивных ядер в образце, то измерение этой величины
+позволяет определить константу распада $\lambda$ по закону радиоактивного распада $N = N_{0}e^{-\lambda t}$. 
+
+Пусть за одну секунду счетчик зарегистрировал n частиц, тогда абсолютная активность источника $N_0$ равна
+
+\begin{equation} \label{Распад 1}
+N_0 = \frac{4\pi n}{\varepsilon \omega}
+\end{equation}
+
+где $\varepsilon$ - эффективность счётчика, $\omega$ - телесный угол в котором регестрируются частицы.
+
+В данной работе предлагается измерить абсолютную активность препарата 60Co.
+
+Испускаемые источником $\gamma$ кванты регистрируются двумя счетчиками. Поскольку каскадные кванты имеют близкие энергии, эффективности их регистрации примерно одинаковы. Обозначим эффективность первого счетчика через $\varepsilon_1$ и телесный угол, под которым он виден из источника, через $\omega_1$. Вероятность регистрации кванта первым счетчиком
+
+\begin{equation} \label{Распад 2}
+P_1 = \frac{\omega_1 \varepsilon_1}{4\pi}
+\end{equation}
+
+Для второго счётчика
+\begin{center}
+$P_2 = \frac{\omega_2 \varepsilon_2}{4\pi}$
+\end{center}
+
+Если включить оба счетчика в схему совпадений с разрешающим временем $\tau \gg 10^{-11}$, то каскадные $\gamma$ кванты будут регистрироваться одновременно. Вероятность совпадений будет равна
+\begin{equation} \label{Распад 3}
+P_\text{совп} = W(\theta) P_1 P_2
+\end{equation}
+
+где $W(\theta)$ -- корреляционная функция, определяющая анизотропию направления вылета второго $\gamma$ кванта по отношению к направлению первого. В данной работе используется хорошо коллимированный пучок, и возможный угол разлета регистрируемых $\gamma$ -квантов мало отличается от $180^{o}$, поэтому величина поправки составляет около 1,08
+
+Истинные скорости счета $N_1$ в первом и $N_2$ во втором счетчиках при абсолютной активности $N_0$ и вероятностях регистрации $P_1$ и $P_2$ имеют значения (при каждом распаде испускаются два $\gamma$ кванта):
+
+\begin{equation} \label{Распад 4}
+N_1 = 2 N_0 P_1, N_2 = 2 N_0 P_2
+\end{equation}
+
+а скорость счёта истинных совпадений 
+
+\begin{equation} \label{Распад 5}
+N_\text{совп} = 2 P_\text{совп} ~ N_{0} = 2 P_1 P_2 N_0
+\end{equation}
+
+Из формул \eqref{Распад 4} и \eqref{Распад 5} с учетом \eqref{Распад 3} получим для абсолютной активности источника $Co^{60}$ следующее выражение:
+
+\begin{equation} \label{Итог}
+N_0 = 1,08 \frac{N_1 N_2}{2 N_\text{совп}}
+\end{equation}
+
+Истинные скорости счета $N_1$ и $N_2$ экспериментально определяются как разность полной скорости счета и фона для каждого счетчика:
+\begin{equation} \label{Итог}
+N_1 = n_\text{1п} - n_\text{1ф},~ N_2 = n_\text{2п} - n_\text{2ф}
+\end{equation}
+
+а скорость истинных совпадений равна разности полного числа совпадений $N_\text{совп}$ и числа случайных совпадений $n_\text{сл}$:
+
+\begin{equation} \label{Итог}
+n_\text{сл} = 2\tau n_\text{1п} n_\text{2п}
+\end{equation}
+
+\newpage
+\section{Экспериментальная установка}
+
+\begin{figure}[h]
+\includegraphics[scale = 0.45]{Установка}
+\caption{Блок-схема установки для изучения ($\gamma - \gamma$ совпадений). ВСВ -- высоковольтный стабилизированный выпрямитель; С -- сцинтиллятор, кристалл йодистого натрия NaI(Ti); Ф -- формирователь импульсов; СС -- схема совпадений; ПП -- пересчетный прибор} \label{Рис 1}
+\end{figure}
+
+Гамма-кванты от источника $Co^{60}$ регистрируются двумя сцинтилляционными счетчиками, каждый из которых состоит из кристалла NaI(TI) и фотоэлектронного умножителя (ФЭУ). Два счётчика необходимы для устранения погрешностей связанных с измерением телесного угла приёмника и его эффективности. Путём подсчёта совпадений срабатывания измерителей. При поглощении $\gamma$-кванта кристаллом возникает световая вспышка, которая преобразуется с помощью ФЭУ в электрический импульс, передаваемый через формирователь импульсов на схему совпадений СС. Фотоэлектронные умножители питаются от высоковольтного стабилизированного выпрямителя. Установка имеет 3 разрешающих времени - 100 нс, 200 нс и 500 нс. Количество зарегистрированных $\gamma$ квантов можно увидеть на экране прибора.
+
+\newpage
+\section{Методика измерения}
+Включим всю аппаратуру и закроем заглушками радиоактивный источник.
+
+Так как излучение гамма кванта является случайным событием, а гамма излучение имеет некоторую среднюю интенсивность, можно сказать, что показания счётчика имеют Пуассоновское распределение. Чтобы добиться точности в 1\% необходимо провести 10 измерений, для $0.5$\% необходимо уже 14 измерений.
+
+Поднесём 1 счётчик на определённое расстояние и измерим фоновую активность $n_\text{1ф}$. Повторим данное измерение 10 раз. То же самое проведём со вторым счётчиком. После этого уберём заглушки и проведём измерения активности для 1 и 2 счётчиков с точностью $0.5$\%.  
+
+Включим прибор СС в режим совпадений и измерим скорости
+счета совпадений для всех разрешающих времен, указанных на приборе, с точностью порядка 1\%.
+
+Запишем все данные в таблицу, выключим аппаратуру и закроем заглушками источник.
+
+\section{Вывод}
+В данной работе была определена абсолютная активность радиоактивного препарата $Co^{60}$ с использованием каскадного перехода $\gamma$ квантов при его распаде. Таким образом его радиоактивность равна: 
+
+$N_0 = 71.8 \pm 1.4 ~ \text{мкКи}$
+
+Так же мы узнали, что $N_0$ существенным образом зависит от разрешающего времени.
+
+
+\newpage
+
+\section{Результаты эксперимента}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[h]
+\begin{tabular}{cccccc|c|c|c|c|c|}
+\cline{1-2} \cline{4-5} \cline{7-8} \cline{10-11}
+\multicolumn{2}{|c|}{\multirow{4}{*}{1 приёмник с заглушкой}} & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{\multirow{4}{*}{2 приёмник с   заглушкой}} & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{\multirow{4}{*}{1 приёмник   без заглушки}} & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{\multirow{4}{*}{2 приёмник   без заглушки}} \\
+\multicolumn{2}{|c|}{}                                        & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{}                                          & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{}                                           & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{}                                           \\
+\multicolumn{2}{|c|}{}                                        & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{}                                          & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{}                                           & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{}                                           \\
+\multicolumn{2}{|c|}{}                                        & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{}                                          & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{}                                           & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{}                                           \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-11} 
+\multicolumn{1}{|c|}{№}      & \multicolumn{1}{c|}{$\text{№}_\text{рег}$}      & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{№}        & \multicolumn{1}{c|}{$\text{№}_\text{рег}$}      &                       & №                             & $\text{№}_\text{рег}$                            &                       & №                              & $\text{№}_\text{рег}$                           \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-11} 
+\multicolumn{1}{|c|}{1}      & \multicolumn{1}{c|}{2733}      & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{1}        & \multicolumn{1}{c|}{5350}      &                       & 1                             & 129770                          &                       & 1                              & 147274                         \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-11} 
+\multicolumn{1}{|c|}{2}      & \multicolumn{1}{c|}{2668}      & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{2}        & \multicolumn{1}{c|}{5327}      &                       & 2                             & 130143                          &                       & 2                              & 145490                         \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-11} 
+\multicolumn{1}{|c|}{3}      & \multicolumn{1}{c|}{2708}      & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{3}        & \multicolumn{1}{c|}{5222}      &                       & 3                             & 130794                          &                       & 3                              & 145209                         \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-11} 
+\multicolumn{1}{|c|}{4}      & \multicolumn{1}{c|}{2766}      & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{4}        & \multicolumn{1}{c|}{5291}      &                       & 4                             & 131151                          &                       & 4                              & 144847                         \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-11} 
+\multicolumn{1}{|c|}{5}      & \multicolumn{1}{c|}{2615}      & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{5}        & \multicolumn{1}{c|}{5165}      &                       & 5                             & 131026                          &                       & 5                              & 143991                         \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-11} 
+\multicolumn{1}{|c|}{6}      & \multicolumn{1}{c|}{2680}      & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{6}        & \multicolumn{1}{c|}{5236}      &                       & 6                             & 131287                          &                       & 6                              & 144228                         \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-11} 
+\multicolumn{1}{|c|}{7}      & \multicolumn{1}{c|}{2523}      & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{7}        & \multicolumn{1}{c|}{5313}      &                       & 7                             & 131821                          &                       & 7                              & 146591                         \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-11} 
+\multicolumn{1}{|c|}{8}      & \multicolumn{1}{c|}{2714}      & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{8}        & \multicolumn{1}{c|}{5316}      &                       & 8                             & 131681                          &                       & 8                              & 144836                         \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-11} 
+\multicolumn{1}{|c|}{9}      & \multicolumn{1}{c|}{2644}      & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{9}        & \multicolumn{1}{c|}{5162}      &                       & 9                             & 131477                          &                       & 9                              & 143999                         \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-11} 
+\multicolumn{1}{|c|}{10}     & \multicolumn{1}{c|}{2632}      & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{10}       & \multicolumn{1}{c|}{5224}      &                       & 10                            & 129701                          &                       & 10                             & 144578                         \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-11} 
+\multicolumn{1}{|c|}{$n_\text{1ф}$}    & \multicolumn{1}{c|}{2670}  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{$n_\text{2ф}$}      & \multicolumn{1}{c|}{5260}    &                       & 11                            & 131047                          &                       & 11                             & 146781                         \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-11} 
+\multicolumn{1}{|c|}{$\Delta n_\text{1ф}$}  & \multicolumn{1}{c|}{30}        & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{$\Delta n_\text{2ф}$}    & \multicolumn{1}{c|}{50}        &                       & 12                            & 130375                          &                       & 12                             & 143943                         \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-11} 
+\multicolumn{1}{l}{}         & \multicolumn{1}{l}{}           &                       & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{}           &                       & 13                            & 131272                          &                       & 13                             & 144551                         \\ \cline{7-8} \cline{10-11} 
+\multicolumn{1}{l}{}         & \multicolumn{1}{l}{}           &                       & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{}           &                       & 14                            & 130514                          &                       & 14                             & 144536                         \\ \cline{7-8} \cline{10-11} 
+\multicolumn{1}{l}{}         & \multicolumn{1}{l}{}           &                       & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{}           &                       & $n_\text{1п}$                           & 130900                        &                       & $n_\text{2п}$                            & 145100                         \\ \cline{7-8} \cline{10-11} 
+\multicolumn{1}{l}{}         & \multicolumn{1}{l}{}           &                       & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{}           &                       & $\Delta n_\text{1п}$                         & 700                             &                       &  $\Delta n_\text{2п}$                          & 700                            \\ \cline{7-8} \cline{10-11} 
+\end{tabular}
+\end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[h]
+\begin{tabular}{|c|c|c|c|c|c|c|c|llll}
+\cline{1-2} \cline{4-5} \cline{7-8}
+\multicolumn{2}{|c|}{\multirow{4}{*}{пересечение f1 и f2 100 мс}} & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{\multirow{4}{*}{пересечение   f1 и f2 200 мс}} & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{\multirow{4}{*}{пересечение   f1 и f2 500 мс}} &                       & \multicolumn{3}{c}{\multirow{4}{*}{Итоговые   значения}}                                    \\
+\multicolumn{2}{|c|}{}                                            & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{}                                              & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{}                                              &                       & \multicolumn{3}{c}{}                                                                        \\
+\multicolumn{2}{|c|}{}                                            & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{}                                              & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{}                                              &                       & \multicolumn{3}{c}{}                                                                        \\
+\multicolumn{2}{|c|}{}                                            & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{}                                              & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{}                                              &                       & \multicolumn{3}{c}{}                                                                        \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-12} 
+№                                 & $\text{№}_\text{рег}$                          &                       & №                                  & $\text{№}_\text{рег}$                          &                       & №                                & №рег                            & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{t, нс}   & \multicolumn{1}{c|}{$N_0 \times 10^3$} & \multicolumn{1}{c|}{$\Delta N_0 \times 10^3$} \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-12} 
+1                                 & 119                           &                       & 1                                  & 185                           &                       & 1                                & 386                             & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{100} & \multicolumn{1}{c|}{2620}      & \multicolumn{1}{c|}{50}         \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-12} 
+2                                 & 93                            &                       & 2                                  & 205                           &                       & 2                                & 367                             & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{200} & \multicolumn{1}{c|}{1310}      & \multicolumn{1}{c|}{24}         \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-12} 
+3                                 & 113                           &                       & 3                                  & 190                           &                       & 3                                & 355                             & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{500} & \multicolumn{1}{c|}{520}       & \multicolumn{1}{c|}{11}         \\ \cline{1-2} \cline{4-5} \cline{7-8} \cline{10-12} 
+4                                 & 109                           &                       & 4                                  & 189                           &                       & 4                                & 360                             &                       &                          &                                &                                 \\ \cline{1-2} \cline{4-5} \cline{7-8}
+5                                 & 95                            &                       & 5                                  & 186                           &                       & 5                                & 389                             &                       &                          &                                &                                 \\ \cline{1-2} \cline{4-5} \cline{7-8}
+6                                 & 100                           &                       & 6                                  & 222                           &                       & 6                                & 372                             &                       &                          &                                &                                 \\ \cline{1-2} \cline{4-5} \cline{7-8}
+7                                 & 93                            &                       & 7                                  & 174                           &                       & 7                                & 380                             &                       &                          &                                &                                 \\ \cline{1-2} \cline{4-5} \cline{7-8}
+8                                 & 80                            &                       & 8                                  & 201                           &                       & 8                                & 396                             &                       &                          &                                &                                 \\ \cline{1-2} \cline{4-5} \cline{7-8}
+9                                 & 102                           &                       & 9                                  & 195                           &                       & 9                                & 385                             &                       &                          &                                &                                 \\ \cline{1-2} \cline{4-5} \cline{7-8}
+10                                & 99                            &                       & 10                                 & 185                           &                       &                                  &                                 &                       &                          &                                &                                 \\ \cline{1-2} \cline{4-5} \cline{7-8}
+$n_\text{свп100}$                           & 100                         &                       & $n_\text{свп200}$                            & 193                         &                       & $n_\text{свп500}$                          & 377                        &                       &                          &                                &                                 \\ \cline{1-2} \cline{4-5} \cline{7-8}
+$\Delta n_\text{свп100}$                         & 1                             &                       & $\Delta n_\text{свп200}$                          & 2                             &                       & $\Delta n_\text{свп500}$                        & 4                               &                       &                          &                                &                                 \\ \cline{1-2} \cline{4-5} \cline{7-8}
+\end{tabular}
+\end{table}
+
+\newpage
+$ $
+\newpage
+\section{График}
+
+\begin{figure}[h]
+\begin{center}
+
+\includegraphics[width = \textwidth]{1 график}
+\caption{График зависимости $N_0$ от $\tau$} \label{Iam}
+
+\end{center}
+\end{figure}
+
+\end{document}

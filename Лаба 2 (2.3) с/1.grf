@@ -1,0 +1,88 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.4.2.543
+MinVersion = 2.5
+OS = Windows NT 6.2 
+
+[Axes]
+xMin = 61.6186425197242
+xMax = 3093.37679474332
+xTickUnit = 200
+xGridUnit = 200
+xShowGrid = 1
+xLabel = №б
+xAxisCross = 3700
+yMin = 3452.23875119627
+yMax = 9852.61709990916
+yTickUnit = 500
+yGridUnit = 500
+yShowGrid = 1
+yLabel = L, A
+yAxisCross = 200
+AxesColor = clBlue
+GridColor = 0x00FF9999
+ShowLegend = 1
+Radian = 1
+
+[PointSeries1]
+FillColor = clRed
+LineColor = clBlue
+Size = 3
+Style = 4
+LabelPosition = 1
+PointCount = 25
+Points = 2630,7032;2606,6929;2530,6717;2524,6678;2496,6599;2478,6533;2468,6507;2430,6402;2420,6383;2406,6334;2396,6305;2378,6267;2362,6217;2334,6164;2326,6143;2306,6096;2294,6074;2282,6036;2258,5976;2246,5945;2214,5882;2190,5852;1936,5401;1862,5341;1864,5331;
+Visible = 0
+LegendText = Ряд 1
+
+[PointSeries2]
+FillColor = clBlue
+LineColor = clBlue
+Size = 3
+Style = 0
+LabelPosition = 1
+PointCount = 8
+Points = 2596,6907;2362,6234;2158,5791;2138,5770;1960,5461;1540,4916;876,4358;332,4047;
+Visible = 0
+LegendText = Ряд 2
+
+[Func1]
+FuncType = 0
+y = 2.26576583E-07*x^3-0.00048919*x^2+0.94316662*x+3773.66955492
+Visible = 0
+LegendText = f(x)=2.2658E-07*x^3-0.0005*x^2+0.9432*x+3773.6696; R²=0.9997
+Color = clBlue
+
+[Func2]
+FuncType = 0
+y = 2.20803813E-07*x^3+2.19172845E-05*x^2-1.26682785*x+6186.87333005
+Visible = 0
+LegendText = f(x)=2.208E-07*x^3+2.1917E-05*x^2-1.2668*x+6186.8733; R²=0.9996
+Color = clRed
+
+[PointSeries3]
+FillColor = clFuchsia
+LineColor = clBlue
+Size = 3
+Style = 0
+LabelPosition = 1
+PointCount = 32
+Points = 2630,7032;2606,6929;2596,6907;2530,6717;2524,6678;2496,6599;2478,6533;2468,6507;2430,6402;2420,6383;2406,6334;2396,6305;2378,6267;2362,6217;2334,6164;2326,6143;2306,6096;2294,6074;2282,6036;2258,5976;2246,5945;2214,5882;2190,5852;2158,5791;2138,5770;1960,5461;1936,5401;1862,5341;1864,5331;1540,4916;876,4358;332,4047;
+LegendText = Ряд 3
+
+[Func3]
+FuncType = 0
+y = 8.48628045E-14*x^5-5.03960588E-10*x^4+1.21313209E-06*x^3-0.00116728*x^2+1.01564662*x+3800.06491235
+LegendText = f(x)=8.4863E-14*x^5-5.0396E-10*x^4+1.2131E-06*x^3-0.0012*x^2+1.0156*x+3800.0649; R²=0.9997
+Color = clFuchsia
+Size = 2
+
+[Data]
+TextLabelCount = 0
+FuncCount = 3
+PointSeriesCount = 3
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+

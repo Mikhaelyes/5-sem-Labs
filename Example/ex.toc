@@ -1,0 +1,15 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Мир формул}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Дроби}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Скобки}{2}{}%
+\contentsline {subsection}{\numberline {1.3}Индексы}{3}{}%
+\contentsline {subsection}{\numberline {1.4}Стандартные функции}{3}{}%
+\contentsline {subsection}{\numberline {1.5}Функции покрупнее}{3}{}%
+\contentsline {subsection}{\numberline {1.6}Диокритические знаки}{4}{}%
+\contentsline {subsubsection}{\numberline {1.6.1}Знаки}{4}{}%
+\contentsline {subsubsection}{\numberline {1.6.2}матрица}{4}{}%
+\contentsline {section}{\numberline {2}Групперовка формул}{5}{}%
+\contentsline {section}{\numberline {3}Картинки}{6}{}%
+\contentsline {section}{\numberline {4}Таблицы}{7}{}%
+\contentsline {section}{\numberline {5}Таблицы и картинки в тексте}{8}{}%
+\contentsline {section}{\numberline {6}Ссылки}{8}{}%

@@ -1,0 +1,241 @@
+\documentclass[%
+ reprint,
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+%preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,amssymb,
+ aps,
+%pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-2}
+\usepackage{multirow}
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+\usepackage[utf8x]{inputenc} % Включаем поддержку UTF8  
+\usepackage[russian]{babel}  % Включаем пакет для поддержки русского языка 
+\usepackage[normalem]{ulem}  % для зачекивания текста
+
+\usepackage[noend]{algorithmic}
+\def\algorithmicrequire{\textbf{Вход:}}
+\def\algorithmicensure{\textbf{Выход:}}
+\def\algorithmicif{\textbf{если}}
+\def\algorithmicthen{\textbf{то}}
+\def\algorithmicelse{\textbf{иначе}}
+\def\algorithmicelsif{\textbf{иначе если}}
+\def\algorithmicfor{\textbf{для}}
+\def\algorithmicforall{\textbf{для всех}}
+\def\algorithmicdo{}
+\def\algorithmicwhile{\textbf{пока}}
+\def\algorithmicrepeat{\textbf{повторять}}
+\def\algorithmicuntil{\textbf{пока}}
+\def\algorithmicloop{\textbf{цикл}}
+% переопределение стиля комментариев
+\def\algorithmiccomment#1{\quad// {\sl #1}}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\begin{document}
+
+
+
+\title{Лабораторная работа 2.2-2.3\\Изучение спектров атома водорода и молекулы йода}% Force line breaks with \\
+
+
+
+\author{Васильев Михаил Владимирович}
+\affiliation{%
+ Студент 3 курса РТ\\
+}%
+
+\collaboration{Московский физико-технический институт}%\noaffiliation
+
+\date{16 сентября 2021 г.}% It is always \today, today,
+             %  but any date may be explicitly specified
+             
+
+\begin{abstract}
+В работе исследуются: а) сериальные закономерности в оптическом спектре водорода; б) спектр поглощения паров йода в видимой области.
+\begin{description}
+\item[Оборудование]
+Спектрометр УМ-2, ртутная и неоновая лампы (для калибровки), водородная лампа, кристаллы йода.
+\end{description}
+\end{abstract}
+
+%\keywords{Suggested keywords}%Use showkeys class option if keyword
+                              %display desired
+\maketitle
+
+%\tableofcontents
+
+\section{Теоретическая часть.}
+\subsection{Основные эффекты лабы.}
+В работе исследуется спектр серии Бальмера водорода и электронно-колебательный спектр йода с помощью спектрометра-монохроматора УМ-2.
+
+ На первом рисунке показаны 0 и 1 серии Деландра, их наложение, наблюдаемое через спектрометр, и положения 1,2 и 3, соотвествующие энергиям $h\nu_{1,0},h\nu_{1,5}$ и $h\nu_\text{гр}$. В монохроматоре спектр поглощения йода наблюдается как набор темных полос, перекрывающих непрерывный спектр, начинающийся с красного цвета.
+
+ На втором рисунке изображены линии $H_\alpha, H_\beta, H_\gamma, H_\delta$. Все линии, кроме последней, хорошо видны в спектрометре ($H_\delta$-линию обнаружить не удалось).
+\begin{figure}[]
+	\begin{subfigure}{0.3\textwidth}
+		\includegraphics[scale=0.3]{1.png}
+		\caption{Йод}
+	\end{subfigure}
+	\begin{subfigure}{0.3\textwidth}
+		\includegraphics[scale=0.3]{2.png}
+		\caption{Водород}
+	\end{subfigure}
+\end{figure}
+\subsection{Введение в основные теоретические вещи лабы.}
+
+В случае водорода уравнение Шредингера может быть решено точно. Его проквантованная энергия выражается формулой:
+\begin{equation}
+E_n= -\frac{2\pi^2m_ee^4Z^2}{h^2}\frac{1}{n^2}
+\end{equation}
+Из этой формулы с помощью постоянной Ридберга $R$ можно получить выражение для длин волн:
+\begin{equation}
+\frac{1}{\lambda_{mn}} = RZ^2\left(\frac{1}{n^2} - \frac{1}{m^2} \right)
+\end{equation}
+При $n=2$ получаем серию Бальмера. При этом $m=3,4,5,6$ соответсвует $H_\alpha, H_\beta, H_\gamma, H_\delta$.
+
+Для йода картина усложняется, так как уравнение Шредингера допускает для этой молекулы более сложные состояния, включающие, помимо стандартных электронных орбиталий, колебательные движения и вращение. Можно показать, что оценка для вклада энергий имеет вид:
+ \begin{equation}
+ \omega_\text{эл}:\omega_\text{колеб}:\omega_\text{вращ} \approx 1 :10^{-3}:10^{-6}
+ \end{equation}
+Как видно из оценки $(3)$, вклад вращательного движения очень мал - именно поэтому он не учитывается в лабораторной работе. 
+
+\newpage
+\section{Экспериментальная установка и методика}
+Для измерения длин волн спектральных линий в работе используется стеклянно-призменный монохроматор-спектрометр УМ-2, предназначенный для спектральных исследований в диапазоне от 0,38 до 1,00 мкм.
+Призменный монохроматор УМ-2. В состав прибора УМ-2 входят следующие основные части (Рис. 2):
+
+\begin{figure}[h!]
+\includegraphics[scale = 0.45]{S.png}
+\caption{Устройство монохроматора УМ-2}
+\end{figure}
+
+1. Входная щель 1, снабженная микрометрическим винтом 9, который позволяет открывать щель на нужную ширину. Обычная ширина щели равна 0,02 -- 0,03 мм.
+
+2. Коллиматорный объектив 2, снабженный микрометрическим винтом 8. Винт позволяет смещать объектив относительно щели при фокусировке спектральных линий различных цветов. 
+
+3. Сложная спектральная призма 3, установленная на поворотном столике 6. Призма 3 состоит из трех склеенных призм П1, П2 и П3. Первые две призмы с преломляющими углами $30^{\circ}$ изготовлены из тяжелого флинта, обладающего большой дисперсией. Промежуточная призма П3 сделана из крона. Лучи отражаются от ее гипотенузной грани и поворачиваются на $90^{\circ}$ Благодаря такому устройству дисперсии призм П1 и П2 и складываются.
+
+4. Поворотный столик 6, вращающийся вокруг вертикальной оси при помощи микрометрического винта 7 с отсчетным барабаном. На барабан нанесена винтовая дорожка с градусными делениями. Вдоль дорожки скользит указатель барабана. При вращении барабана призма поворачивается, и в центре поля зрения появляются различные участки спектра.
+
+5. Зрительная труба, состоящая из объектива 4 и окуляра 5. Объектив создает изображение входной щели 1 различных цветов в своей фокальной плоскости. В этой же плоскости расположен указатель 10. Изображение щели рассматривается через окуляр 5. В случае необходимости окуляр может быть заменен выходной щелью, пропускающей одну из линий спектра. В этом случае прибор служит монохроматором. В данной работе выходная щель не применяется.
+
+6. Массивный корпус 11, предохраняющий прибор от повреждений и загрязнений.
+
+7. Оптическая скамья, на которой могут перемещаться рейтеры с источником света Л и конденсором К, служащим для концентрации света на входной щели. 
+
+8. Пульт управления, служащий для питания источников света и осветительной системы спектрометра. На пульте имеются гнезда для подключения осветителей (3,5 В), неоновой лампы и лампы накаливания. Тумблеры, расположенные на основании спектрометра, позволяют включать лампочки осветителей шкал и указателя спектральных линий. Яркость освещения указателя регулируется реостатом.
+
+Спектрометр УМ-2 нуждается в предварительной градуировке. Для градуировки в коротковолновой части спектра удобно применять ртутную лампу П К-4, а в длинноволновой и средней части спектра неоновую лампу.
+
+
+\newpage
+$ $
+%\newpage
+
+
+\begin{figure}[h!]
+\includegraphics[scale = 0.45]{G1.jpg}
+\end{figure}
+
+
+\newpage
+$ $
+\newpage
+
+\section{Основные результаты и их обсуждение}
+
+
+
+Все результаты измерений и вычислений сведены в таблицу. 
+
+При вычислении длин волн первых четырёх серий была использована степенная аппорсимация калибровочных графиков спектров неона и ртути. Сравнивая их с эталонными значениями, видим, во-первых, что спектр ртути лучше аппроксимирует истинную зависимость длины волны от поворота барабана, во- вторых, $\gamma$ линия хорошо аппроксимируется обоими спектрами. Ниже приведены погрешности аппроксимаций, полученные из погрешностей МНК.
+
+Измерение сериального отношения и постоянной Ридберга показывают, что и в этом случае спектры неона и ртути дают хорошое приближение, из-за чего результаты вычислений хорошо сходятся с эталоном.
+
+В низу таблицы приведены измерения различных энергий для молекулы йода. Результаты вычислений верно отражают порядок полученных значений (тем не менее, нельзя достоверно ручаться про мантиссы, так как экспериментально было сложно определить, где начинается $h\nu_{1,0}$ и заканчивается $h\nu_\text{гр}$ )
+
+\section{Заключение}
+
+В работе были выполены соедующие задачи:
+
+1) Исследована серия Бальмера водорода, вычислены длины волн и постоянная Ридберга
+
+2) Исследован электронно-колебательный спектр йода, вычислены энергии перехода и диссоциации.
+
+\newpage
+$ $
+\newpage
+\section{Данные}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[h]
+\begin{tabular}{|l|l|l|lclclll}
+\cline{1-3} \cline{5-10}
+\multicolumn{3}{|c|}{\multirow{2}{*}{Градуировка спекроскопа по спектрам неона и ртути}} & \multicolumn{1}{l|}{} & \multicolumn{6}{c|}{\multirow{2}{*}{Измерение   положения спектральных линий водорода}}                                                                                                  \\
+\multicolumn{3}{|c|}{}                                                                   & \multicolumn{1}{l|}{} & \multicolumn{6}{c|}{}                                                                                                                                                                    \\ \cline{1-3} \cline{5-10} 
+№л                         & №б                          & L, А                         & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{№}   & \multicolumn{1}{c|}{№б}   & \multicolumn{1}{c|}{L, A} & \multicolumn{1}{c|}{dL, A} & \multicolumn{1}{c|}{$R * 10^6 m^{-1}$} & \multicolumn{1}{c|}{$dR * 10^6 m^{-1}$} \\ \cline{1-3} \cline{5-10} 
+1                          & 2630                         & 7032                         & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{H1}  & \multicolumn{1}{c|}{2484} & \multicolumn{1}{c|}{6562} & \multicolumn{1}{c|}{12}    & \multicolumn{1}{c|}{10,97}         & \multicolumn{1}{c|}{0,02}           \\ \cline{1-3} \cline{5-10} 
+2                          & 2606                         & 6929                         & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{H2}  & \multicolumn{1}{c|}{1488} & \multicolumn{1}{c|}{4873} & \multicolumn{1}{c|}{12}    & \multicolumn{1}{c|}{10,95}         & \multicolumn{1}{c|}{0,02}           \\ \cline{1-3} \cline{5-10} 
+3                          & 2596                         & 6907                         & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{H3}  & \multicolumn{1}{c|}{842}  & \multicolumn{1}{c|}{4336} & \multicolumn{1}{c|}{8}     & \multicolumn{1}{c|}{10,98}         & \multicolumn{1}{c|}{0,02}           \\ \cline{1-3} \cline{5-10} 
+4                          & 2530                         & 6717                         & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{H4}  & \multicolumn{1}{c|}{404}  & \multicolumn{1}{c|}{4090} & \multicolumn{1}{c|}{4}     & \multicolumn{1}{c|}{11,00}         & \multicolumn{1}{c|}{0,01}           \\ \cline{1-3} \cline{5-10} 
+5                          & 2524                         & 6678                         &                       & \multicolumn{1}{l}{}     &                           & \multicolumn{1}{l}{}      &                            &                                    &                                     \\ \cline{1-3} \cline{5-8}
+6                          & 2496                         & 6599                         & \multicolumn{1}{l|}{} & \multicolumn{4}{c|}{\multirow{2}{*}{Измерение положения спектральных   линий йода}}                           &                                    &                                     \\ \cline{1-3}
+7                          & 2478                         & 6533                         & \multicolumn{1}{l|}{} & \multicolumn{4}{c|}{}                                                                                         &                                    &                                     \\ \cline{1-3} \cline{5-8}
+8                          & 2468                         & 6507                         & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{№}   & \multicolumn{1}{c|}{№б}   & \multicolumn{1}{c|}{L, A} & \multicolumn{1}{c|}{dL, A} &                                    &                                     \\ \cline{1-3} \cline{5-8}
+9                          & 2430                         & 6402                         & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{h10} & \multicolumn{1}{c|}{2252} & \multicolumn{1}{c|}{5979} & \multicolumn{1}{c|}{12}    &                                    &                                     \\ \cline{1-3} \cline{5-8}
+10                         & 2420                         & 6383                         & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{h15} & \multicolumn{1}{c|}{2124} & \multicolumn{1}{c|}{5729} & \multicolumn{1}{c|}{12}    &                                    &                                     \\ \cline{1-3} \cline{5-8}
+11                         & 2406                         & 6334                         & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{hгр} & \multicolumn{1}{c|}{1744} & \multicolumn{1}{c|}{5167} & \multicolumn{1}{c|}{10}    &                                    &                                     \\ \cline{1-3} \cline{5-8}
+12                         & 2396                         & 6305                         &                       & \multicolumn{1}{l}{}     &                           & \multicolumn{1}{l}{}      &                            &                                    &                                     \\ \cline{1-3} \cline{5-8}
+13                         & 2378                         & 6267                         & \multicolumn{1}{l|}{} & \multicolumn{4}{c|}{\multirow{2}{*}{Различные   энергии}}                                                     &                                    &                                     \\ \cline{1-3}
+14                         & 2362                         & 6217                         & \multicolumn{1}{l|}{} & \multicolumn{4}{c|}{}                                                                                         &                                    &                                     \\ \cline{1-3} \cline{5-8}
+15                         & 2334                         & 6164                         & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{Название}                        & \multicolumn{2}{c|}{Величина, ЭВ}                      &                                    &                                     \\ \cline{1-3} \cline{5-8}
+16                         & 2326                         & 6143                         & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{hU1}                             & \multicolumn{2}{c|}{0,027}                             &                                    &                                     \\ \cline{1-3} \cline{5-8}
+17                         & 2306                         & 6096                         & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{hU2}                             & \multicolumn{2}{c|}{0,018}                             &                                    &                                     \\ \cline{1-3} \cline{5-8}
+18                         & 2294                         & 6074                         & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{hUэл}                            & \multicolumn{2}{c|}{0,009}                             &                                    &                                     \\ \cline{1-3} \cline{5-8}
+19                         & 2282                         & 6036                         & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{D1}                              & \multicolumn{2}{c|}{1,47}                              &                                    &                                     \\ \cline{1-3} \cline{5-8}
+20                         & 2258                         & 5976                         & \multicolumn{1}{l|}{} & \multicolumn{2}{c|}{D2}                              & \multicolumn{2}{c|}{2,4}                               &                                    &                                     \\ \cline{1-3} \cline{5-8}
+21                         & 2246                         & 5945                         &                       & \multicolumn{1}{l}{}     &                           & \multicolumn{1}{l}{}      &                            &                                    &                                     \\ \cline{1-3}
+22                         & 2214                         & 5882                         &                       & \multicolumn{1}{l}{}     &                           & \multicolumn{1}{l}{}      &                            &                                    &                                     \\ \cline{1-3}
+23                         & 2190                         & 5852                         &                       & \multicolumn{1}{l}{}     &                           & \multicolumn{1}{l}{}      &                            &                                    &                                     \\ \cline{1-3}
+24                         & 2158                         & 5791                         &                       & \multicolumn{1}{l}{}     &                           & \multicolumn{1}{l}{}      &                            &                                    &                                     \\ \cline{1-3}
+25                         & 2138                         & 5770                         &                       & \multicolumn{1}{l}{}     &                           & \multicolumn{1}{l}{}      &                            &                                    &                                     \\ \cline{1-3}
+26                         & 1960                         & 5461                         &                       & \multicolumn{1}{l}{}     &                           & \multicolumn{1}{l}{}      &                            &                                    &                                     \\ \cline{1-3}
+27                         & 1936                         & 5401                         &                       & \multicolumn{1}{l}{}     &                           & \multicolumn{1}{l}{}      &                            &                                    &                                     \\ \cline{1-3}
+28                         & 1862                         & 5341                         &                       & \multicolumn{1}{l}{}     &                           & \multicolumn{1}{l}{}      &                            &                                    &                                     \\ \cline{1-3}
+29                         & 1864                         & 5331                         &                       & \multicolumn{1}{l}{}     &                           & \multicolumn{1}{l}{}      &                            &                                    &                                     \\ \cline{1-3}
+30                         & 1540                         & 4916                         &                       & \multicolumn{1}{l}{}     &                           & \multicolumn{1}{l}{}      &                            &                                    &                                     \\ \cline{1-3}
+31                         & 876                          & 4358                         &                       & \multicolumn{1}{l}{}     &                           & \multicolumn{1}{l}{}      &                            &                                    &                                     \\ \cline{1-3}
+32                         & 332                          & 4047                         &                       & \multicolumn{1}{l}{}     &                           & \multicolumn{1}{l}{}      &                            &                                    &                                     \\ \cline{1-3}
+\end{tabular}
+\end{table}
+
+\end{document}

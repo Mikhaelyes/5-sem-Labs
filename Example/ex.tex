@@ -1,0 +1,222 @@
+%класс документа, А4, шрифт
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[T2A]{fontenc} %кодировка
+\usepackage[utf8]{inputenc} %кодировка исходного текста
+\usepackage[english, russian]{babel} %локализация и переносы
+
+%математика
+\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools}
+
+%графика
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{wrapfig} %обтекание фигур
+
+%заголовок
+\title{Example}
+\author{Mikhail }
+\date{September 2021}
+
+\begin{document}
+
+%формирование титульного
+\maketitle
+
+\tableofcontents 
+%создание оглавлений
+
+\newpage
+Наша первая строчка.
+
+Вторая строчка\\
+Третяя строчка\\[2cm] %отступ
+Четвёртая \hspace{15 mm} строчка
+
+Важное можно выделить \textbf{жирным}.
+
+Можно выделить \textit{курсивом}
+
+Можно \underline{подчеркнуть}
+
+\fbox{рамочка}
+
+Дефис не тире --
+
+Ковычки это <<так>>
+
+\section{Мир формул}
+
+Наша первая формула $100 + 100 = 200$, ага.
+
+\[100+100=200\]
+
+%присваивается номер уравнения
+\begin{equation} \label{Пифагор}
+a^2 + b^2 = c^2  
+\end{equation}
+
+Теорему Пифагора \eqref{Пифагор} вы знаете \footnote{Определённо знаете}. Она упоминается на странице \pageref{Пифагор}.
+
+\subsection{Дроби} % \subsection* если не хочется нумеровать (относится ко всему).
+
+$\frac{1}{3} +\frac{1}{3} = \frac{2}{3}$ Вот вам и дроби \footnote{Красиво} большей высоты. {\scriptsize Так некрасиво.}
+{\large А так красиво}
+
+ыыыыыыыы
+
+ssssssss
+\[\frac{1}{3} +\frac{1}{3} = \frac{2}{3}\]
+
+\subsection{Скобки}
+
+\[(2 + 2) \cdot 3 = 12 \] %\times
+
+\[ \left( \frac{4}{2} + 2 \right) \cdot 3 = 12 \]
+
+\[ \{ 2 + 2 \} \cdot 3 = 12 \]
+
+\subsection{Индексы}
+
+\[ m_1,  m_{12}, c^{22} \]
+
+\subsection{Стандартные функции}
+
+\[ sin x = 0 \]
+\[\arctan x = \sqrt[5]{y}\]
+
+\subsection{Функции покрупнее}
+
+$\sum_{i = 1} ^ {n} a_i + b_i $
+\[\sum_{i = 1} ^ {n} a_i + b_i \]
+
+\[I = \int_{0}^{\infty} r^2 dm \]
+
+\newpage
+\begin{center}
+Вторая часть ура
+\end{center}
+
+\begin{flushright}
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+
+\end{flushright}
+\begin{itemize}
+\item 1
+\item 2
+\item 3
+
+
+\end{itemize}
+
+\begin{enumerate}
+
+\item 1
+\item 2
+\item 3
+
+\end{enumerate}
+
+\subsection{Диокритические знаки}
+
+\[ \dot{x} = 0, \]
+\[ \tilde{a} = \overline{bcde}, \]
+\[ \overrightarrow{a} = \overline{bcde}, \]
+\[\underbrace{x+y+z}_n = 1 \]
+\[(x-1)(x+1) \stackrel{x > 0} {\eqslantless} 0 \]
+
+\subsubsection{Знаки}
+
+\[ m_\text{груза} = 15 ~ \text{кг}   \] %обратить внимание на тильду
+
+\subsubsection{матрица}
+
+\[\begin{pmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{pmatrix} \]
+
+\[\begin{bmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{bmatrix} \]
+
+\[\begin{vmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{vmatrix} \]
+
+\[\begin{Vmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{Vmatrix} \]
+
+\section{Групперовка формул}
+
+\begin{equation}
+\begin{aligned}
+& 100 + 1 + 1272676 = 1 & 10 + 20 = 30\\
+& 13 + 1 + 1672 = 1 \\
+& 1 + 1 + 12727 = 1  
+\end{aligned}
+\end{equation}
+% & отвечает за выравнивание и второй столбик
+
+\[ \left\{
+\begin{aligned}
+100 + 1 + 1272676 = 1\\
+13 + 1 + 1672 = 1 \\
+1 + 1 + 12727 = 1  
+\end{aligned} \right.
+\]
+
+\section{Картинки}
+
+\includegraphics[scale=0.5]{AB}
+
+\includegraphics[width = 4 cm]{AB}
+
+\includegraphics[width = \textwidth]{AB}
+
+\begin{figure}[h]
+\begin{center}
+
+\includegraphics[width = 4 cm]{AB}
+\caption{I am Mikhail} \label{Iam}
+
+\end{center}
+\end{figure}
+
+\section{Таблицы}
+
+\begin{tabular}{|c|c|cp{5cm}|}
+\hline 
+\multicolumn{3}{|c|}{Погрешности} & sssssssssssssssssssssssssss sssssssssssssssssssss ssssssssssssssssssssssssssssss \\ 
+\hline 
+\hline 
+Случайная & Систематическая &  Общая & \\ 
+\hline 
+\end{tabular} 
+
+%\begin{figure}[h]
+%\center{\includegraphics[scale=0.5]{AB.jpg}}
+%\caption{Тестовый рисунок "AB"}
+%\label{fig:image}
+%\end{figure}
+
+\section{Таблицы и картинки в тексте}
+
+\begin{wrapfigure}{l}{6cm}
+\includegraphics[width = 6cm]{AB}
+\caption{Дуб}
+\end{wrapfigure}
+Большинство дубов — это здоровые, плотные деревья. Многие виды этого рода принадлежат к числу так называемых вечнозелёных, то есть снабжены кожистыми листьями, остающимися на растении по нескольку лет. У других листья опадают ежегодно или, высыхая, остаются на дереве и разрушаются постепенно. Большинство вечнозеленых видов имеют цельные листья, другие — лопастные. Цветки однодомные: мужские и женские на одном и том же растении. Женские цветки образуют небольшие пучки или серёжки, мужские собраны висящими или стоячими, часто длинными серёжками. Цветочные покровы простые, слабо развитые, но при основании женских цветов образуется множество чешуевидных листочков, находящихся на кольчатом валике, который есть sss
+
+
+\listoffigures
+\listoftables
+
+\end{document}

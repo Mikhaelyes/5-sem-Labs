@@ -1,0 +1,73 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.4.2.543
+MinVersion = 2.5
+OS = Windows NT 6.2 
+
+[Axes]
+xMin = -29.68936679
+xMax = 636.97729988
+xTickUnit = 50
+xGridUnit = 50
+xShowGrid = 1
+xLabel = t, нс
+xAxisCross = 400
+yMin = 288.42518281
+yMax = 2843.98073836
+yTickUnit = 200
+yGridUnit = 200
+yShowGrid = 1
+yLabel = N0 * 10^3
+AxesColor = clBlue
+GridColor = 0x00FF9999
+ShowLegend = 1
+Radian = 1
+
+[PointSeries1]
+FillColor = clRed
+LineColor = clBlue
+Size = 3
+Style = 4
+LabelPosition = 1
+PointCount = 3
+Points = 100,2620;200,1310;500,520;
+yErrorBarType = 2
+yErrorBarValue = 2
+LegendText = Ряд 1
+
+[Func1]
+FuncType = 0
+y = 3359.87261483*0.99618675^x
+Visible = 0
+LegendText = f(x)=3359.8726*0.9962^x; R²=0.9234
+Color = clRed
+
+[Func2]
+FuncType = 0
+y = 0.02616667*x^2-20.95*x+4453.33333333
+Visible = 0
+LegendText = f(x)=0.0262*x^2-20.95*x+4453.3333; R²=1
+Color = clRed
+
+[Func3]
+FuncType = 0
+y = -1281.65893733*ln(x)+8369.30044792
+Visible = 0
+LegendText = f(x)=-1281.6589*ln(x)+8369.3004; R²=0.9516
+Color = clRed
+
+[Func4]
+FuncType = 0
+y = 2.68374284E+05*x^-1.00494954
+LegendText = f(x)=2.6837E+05*x^-1.0049; R²=1
+Color = clRed
+
+[Data]
+TextLabelCount = 0
+FuncCount = 4
+PointSeriesCount = 1
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+
