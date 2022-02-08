@@ -1,0 +1,116 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.4.2.543
+MinVersion = 2.5
+OS = Windows NT 6.2 
+
+[Axes]
+xMin = -0.771042688855284
+xMax = 12.9463784381447
+xTickUnit = 1
+xGridUnit = 1
+xLabel = l, см
+xAxisCross = -3
+yMin = -3.01041988521669
+yMax = 1.10480644478331
+yTickUnit = 0.5
+yGridUnit = 0.5
+yLabel = ln(N/N0)
+AxesColor = clBlue
+GridColor = 0x00FF9999
+ShowLegend = 1
+Radian = 1
+
+[PointSeries1]
+FillColor = clLime
+LineColor = clBlue
+Size = 3
+Style = 1
+LabelPosition = 1
+PointCount = 5
+Points = 2,-0.406602166;4,-0.80913545;6,-1.236195366;8,-1.631778591;10,-2.0408209;
+xErrorBarType = 2
+xErrorBarValue = 1
+yErrorBarType = 2
+yErrorBarValue = 0.3
+LegendText = Ряд 2
+
+[PointSeries2]
+FillColor = clBlue
+LineColor = clBlue
+Size = 3
+Style = 1
+LabelPosition = 1
+PointCount = 4
+Points = 2,-0.573178413;4,-1.156669607;6,-1.710592601;8,-2.296028154;
+xErrorBarType = 2
+xErrorBarValue = 1
+yErrorBarType = 2
+yErrorBarValue = 0.3
+LegendText = Ряд 1
+
+[PointSeries3]
+FillColor = clRed
+LineColor = clBlue
+Size = 3
+Style = 1
+LabelPosition = 1
+PointCount = 4
+Points = 1,-0.587851605;2,-1.09835116;3,-1.667772043;4,-2.238094659;
+xErrorBarType = 2
+xErrorBarValue = 1
+yErrorBarType = 2
+yErrorBarValue = 0.3
+LegendText = Ряд 3
+
+[Func1]
+FuncType = 0
+y = -0.552015*x-0.01797986
+LegendText = f(x)=-0.552*x-0.018; R²=0.9993
+Color = clRed
+Size = 2
+
+[Func2]
+FuncType = 0
+y = -0.28612361*x-0.00349914
+LegendText = f(x)=-0.2861*x-0.0035; R²=0.9999
+Color = clBlue
+Size = 2
+
+[Func3]
+FuncType = 0
+y = -0.20455403*x+0.00241769
+LegendText = f(x)=-0.2046*x+0.0024; R²=0.9999
+Color = clLime
+Size = 2
+
+[PointSeries4]
+FillColor = clFuchsia
+LineColor = clBlue
+Size = 3
+Style = 1
+LabelPosition = 1
+PointCount = 5
+Points = 2,-0.010365949;4,-0.033576915;6,-0.051533311;8,-0.061797013;10,-0.087919122;
+xErrorBarType = 2
+xErrorBarValue = 1
+yErrorBarType = 2
+yErrorBarValue = 0.3
+LegendText = Ряд 4
+
+[Func4]
+FuncType = 0
+y = -0.00916632*x+0.00595947
+LegendText = f(x)=-0.0092*x+0.006; R²=0.984
+Color = clFuchsia
+Size = 2
+
+[Data]
+TextLabelCount = 0
+FuncCount = 4
+PointSeriesCount = 4
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+

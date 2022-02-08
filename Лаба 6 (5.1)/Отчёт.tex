@@ -1,0 +1,240 @@
+\documentclass[%
+ reprint,
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+%preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,amssymb,
+ aps,
+%pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-2}
+\usepackage{multirow}
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+\usepackage[utf8x]{inputenc} % Включаем поддержку UTF8  
+\usepackage[russian]{babel}  % Включаем пакет для поддержки русского языка 
+\usepackage[normalem]{ulem}  % для зачекивания текста
+
+\usepackage[noend]{algorithmic}
+\def\algorithmicrequire{\textbf{Вход:}}
+\def\algorithmicensure{\textbf{Выход:}}
+\def\algorithmicif{\textbf{если}}
+\def\algorithmicthen{\textbf{то}}
+\def\algorithmicelse{\textbf{иначе}}
+\def\algorithmicelsif{\textbf{иначе если}}
+\def\algorithmicfor{\textbf{для}}
+\def\algorithmicforall{\textbf{для всех}}
+\def\algorithmicdo{}
+\def\algorithmicwhile{\textbf{пока}}
+\def\algorithmicrepeat{\textbf{повторять}}
+\def\algorithmicuntil{\textbf{пока}}
+\def\algorithmicloop{\textbf{цикл}}
+% переопределение стиля комментариев
+\def\algorithmiccomment#1{\quad// {\sl #1}}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+\begin{document}
+
+
+
+\title{Лабораторная работа 5.1\\Измерение коэффициента ослабления потока $ \gamma $ -лучей в веществе и определение их энергии}% Force line breaks with \\
+
+
+
+\author{Васиильев Михаил Владимирович}
+\affiliation{%
+ Студент 3 курса РТ\\
+}%
+
+\collaboration{Московский физико-технический институт}%\noaffiliation
+
+\date{30 ноября 2021 г.}% It is always \today, today,
+             %  but any date may be explicitly specified
+             
+
+\begin{abstract}
+С помощью сцинтилляционного счетчика измеряются линейные коэффициенты ослабления потока $ \gamma $ -лучей в свинце, железе, пробке и алюминии; по их величине определяется энергия $ \gamma $ -квантов.
+\begin{description}
+\item[Оборудование]
+Свинцовый коллиматор, набор поглотителей из свинца, алюминия, пробки, сцинтилляционный счетчик.
+\end{description}
+\end{abstract}
+
+%\keywords{Suggested keywords}%Use showkeys class option if keyword
+                              %display desired
+\maketitle
+
+%\tableofcontents
+
+\section{Теоретическая часть.}
+$ \gamma $ -лучи возникают при переходе возбужденных ядер из одного энергетического состояния в другое, более низкое. Энергия $ \gamma $ -квантов обычно заключена между несколькими десятками килоэлектронвольт и несколькими миллионами электрон-вольт. $ \gamma $ -кванты не несут электрического заряда, их масса равна нулю. Проходя через вещество, пучок $ \gamma $ -квантов постепенно ослабляется. Ослабление происходит по экспоненциальному закону, который может быть записан в двух эквивалентных формах:
+
+\begin{equation*}
+I = I_{0} e^{-\mu l} 
+\end{equation*}
+\begin{equation*}
+I = I_{0} e^{-\mu 'm_{1}} 
+\end{equation*}
+В этих формулах I, $I_{0}$ -- интенсивности прошедшего и падающего излучений, l -- длина пути, пройденного пучком $\gamma$ -лучей, $m_{1}$ -- масса пройденного вещества, приходящаяся на единицу площади, $\mu$ и $\mu '$-- константы, величина которых зависит от вещества, сквозь которое проходят $\gamma$ -лучи.
+
+Ослабление потока $\gamma$ -лучей, происходящее при прохождении среды, связано с тремя эффектами: фотоэлектрическим поглощением, комптоновским рассеянием и с генерацией электрон-позитронных пар.
+
+Фотоэлектрическое поглощение. При столкновении $\gamma$ -квантов с электронами внутренних атомных оболочек может происходить поглощение квантов. Энергия $\gamma$ -кванта передается соответствующему электрону, а импульс делится между этим электроном и оставшимся после его вылета ионом. Свободный электрон не может поглотить $\gamma$ -квант, так как при этом невозможно одновременно удовлетворить законам сохранения энергии и импульса. Наружные электроны не принимают участия в фотоэлектрическом поглощении, потому что они слабо связаны в атоме, так что их практически можно считать свободными.
+
+Вероятность фотоэффекта сложным образом зависит от энергии $\gamma$ -лучей и от заряда ядер. Для оценок можно пользоваться формулой
+
+\begin{equation*}
+\sigma_{\text{ф}} \propto \frac{Z^{5}}{(\hbar \omega)^{3,5}} 
+\end{equation*}
+
+Комптоновское рассеяние. Комптоновским рассеянием (или комптон-эффектом) называется упругое столкновение $\gamma$ -кванта с электроном. При таком столкновении $\gamma$ -квант передает электрону часть своей энергии, величина которой определяется углом рассеяния. В отличие от фотоэффекта, который может идти только на сильно связанных электронах, комптоновское рассеяние происходит на свободных или слабосвязанных электронах Роль эффекта Комптона становится существенной только тогда, когда энергия квантов становится много больше энергии связи электронов в атоме (когда достаточно падает вероятность фотоэффекта). Атомные электроны в этом случае можно считать практически свободными, что обычно и делается при теоретическом анализе.
+
+Вероятность комптон-эффекта сложным образом зависит от энергии $\gamma$ -квантов. В том случае, когда энергия $\gamma$ -кванта много больше энергии покоя электрона, формула сильно упрощается, и выражение для сечения комптон-эффекта приобретает простой вид:
+
+\begin{equation*}
+\sigma_{k} = \pi r^{2} \frac{m c^{2}}{\hbar \omega} (ln \frac{2 \hbar \omega}{m c^{2}} +\frac{1}{2})
+\end{equation*}
+где $r \simeq 2,8 \cdot  10^{-13}$ см классический радиус электрона, а m -- его масса.
+
+Образование пар. При энергиях $\gamma$ -лучей, превышающих $2mc^{2} = 1,02$ МэВ, становится возможен процесс поглощения $\gamma$ -лучей, связанный с образованием электрон-позитронных пар. Рождение пар не может происходить в вакууме, оно возникает в электрическом поле ядер. Вероятность этого процесса приблизительно пропорциональна $Z^{2}$ и сложным образом зависит от энергии фотона. При энергиях больше $2mc^{2}$ фотоэффект даже для самых тяжелых ядер уже не играет практически никакой роли. Вероятность образования пар должна поэтому сравниваться с вероятностью комптоновского рассеяния. При энергиях, с которыми приходится иметь дело при изучении ядер, рождение пар существенно только в самых тяжелых элементах.
+
+Полный коэффициент ослабления потока $\gamma$-лучей. Полный линейный коэффициент ослабления пучка $\gamma$-квантов при прохождении через вещество равен сумме коэффициентов для всех трех рассмотренных процессов.
+
+\section{Экспериментальная установка и методика}
+
+\begin{figure}[h]
+\includegraphics[scale = 0.40]{Ph.png}
+\caption{Блок-схема установки, используемой для измерения коэффициентов ослабления потока $\gamma$ -лучей: И -- источник $\gamma$ -лучей; Pb -- свинцовый контейнер с коллиматорным каналом; П -- набор поглотителей; С -- сцинтиллятор -- кристалл NaI(Tl); Ф -- формирователь-выпрямитель}
+\end{figure}
+
+Схема установки, используемой в работе, показана на рис. 1. Свинцовый коллиматор выделяет узкий почти параллельный пучок $\gamma$ -квантов, проходящий через набор поглотителей П и регистрируемый сцинтилляционным счетчиком*). Сигналы от счетчика усиливаются и регистрируются пересчетным прибором ПП. Высоковольтный выпрямитель ВВ обеспечивает питание сцинтилляционного счетчика. При недостаточно хорошей геометрии в результаты опытов могут вкрасться существенные погрешности. В реальных установках всегда имеется конечная вероятность того, что $\gamma$ -квант провзаимодействует в поглотителе несколько раз до того, как попадет в детектор. Чтобы уменьшить число таких случаев, в данной работе сцинтилляционный счетчик расположен на большом расстоянии от источника $\gamma$ -квантов, а поглотители имеют небольшие размеры. Их следует устанавливать за коллиматорной щелью на некотором расстоянии друг от друга, чтобы испытавшие комптоновское рассеяние и выбывшие из прямого потока кванты с меньшей вероятностью могли в него вернуться.
+
+Исследуем поглощение $\gamma$ -лучей в свинце, железе и алюминии. Для этого измеряем число частиц, попадающих в счетчик за фиксированное время в отсутствие (N0)и в присутствии (N) поглотителя. Измеряем поглощение лучей при различных толщинах образцов.
+
+
+\section{Основные результаты и их обсуждение}
+При построении графиков получаются почти идеальные прямые, что согласуется с теорией.
+
+\begin{table}[h]
+\begin{tabular}{lllll}
+\hline
+\multicolumn{1}{|l|}{}     & \multicolumn{1}{l|}{Fe}   & \multicolumn{1}{l|}{Al}   & \multicolumn{1}{l|}{Pb}   & \multicolumn{1}{l|}{Пробка} \\ \hline
+\multicolumn{1}{|l|}{$ \mu  ' \cdot  10^{-1}, \text{см}^{2}/\text{г}$} & \multicolumn{1}{l|}{$1,56 \pm 0,03$} & \multicolumn{1}{l|}{$0,81 \pm 0,04$} & \multicolumn{1}{l|}{$1,08 \pm 0,02$} & \multicolumn{1}{l|}{$0.72 \pm 0,02$}   \\ \hline
+                           &                           &                           &                           &                            
+\end{tabular}
+\end{table}
+
+
+\section{Заключение}
+Сравнив полученный коэффициент ослабления с табличными значениями в Лабораторном практикуме, можно заключить, что энергия излучения около $ 0,6 \pm 0,05$ МэВ
+
+\section{Данные и график}
+\newpage
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[h]
+\begin{tabular}{|ccl|cccccccccc}
+\cline{1-3} \cline{5-7} \cline{9-13}
+\multicolumn{3}{|c|}{\multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}Фон в присутствии \\ заглушки\end{tabular}}} & \multicolumn{1}{c|}{} & \multicolumn{3}{c|}{\multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}Фон без   заглушки \\ и поглотителя\end{tabular}}} & \multicolumn{1}{c|}{} & \multicolumn{5}{c|}{\multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}Зависимость   фона от \\ количества пробок\end{tabular}}}                                                                            \\
+\multicolumn{3}{|c|}{}                                                                                       & \multicolumn{1}{c|}{} & \multicolumn{3}{c|}{}                                                                                             & \multicolumn{1}{c|}{} & \multicolumn{5}{c|}{}                                                                                                                                                                               \\
+\multicolumn{3}{|c|}{}                                                                                       & \multicolumn{1}{c|}{} & \multicolumn{3}{c|}{}                                                                                             & \multicolumn{1}{c|}{} & \multicolumn{5}{c|}{}                                                                                                                                                                               \\ \cline{1-3} \cline{5-7} \cline{9-13} 
+\multicolumn{1}{|c|}{№}                            & \multicolumn{2}{c|}{N}                                  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{№}                              & \multicolumn{2}{c|}{N0}                                     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{№}                  & \multicolumn{1}{c|}{Nф}    & \multicolumn{1}{c|}{N}     & \multicolumn{1}{c|}{$ln(N/N0)$}                  & \multicolumn{1}{c|}{$\Delta ln(N/N0)$}                 \\ \cline{1-3} \cline{5-7} \cline{9-13} 
+\multicolumn{1}{|c|}{1}                            & \multicolumn{2}{c|}{177}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{1}                              & \multicolumn{2}{c|}{70557}                                  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{\multirow{2}{*}{1}} & \multicolumn{1}{c|}{70242} & \multicolumn{1}{c|}{70056} & \multicolumn{1}{c|}{\multirow{2}{*}{-0,01037}} & \multicolumn{1}{c|}{\multirow{2}{*}{0,0001}} \\ \cline{1-3} \cline{5-7} \cline{10-11}
+\multicolumn{1}{|c|}{2}                            & \multicolumn{2}{c|}{183}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{2}                              & \multicolumn{2}{c|}{70863}                                  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{70343} & \multicolumn{1}{c|}{70157} & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          \\ \cline{1-3} \cline{5-7} \cline{9-13} 
+\multicolumn{1}{|c|}{3}                            & \multicolumn{2}{c|}{175}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{3}                              & \multicolumn{2}{c|}{70667}                                  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{\multirow{2}{*}{2}} & \multicolumn{1}{c|}{68779} & \multicolumn{1}{c|}{68593} & \multicolumn{1}{c|}{\multirow{2}{*}{-0,03358}} & \multicolumn{1}{c|}{\multirow{2}{*}{0,0001}}  \\ \cline{1-3} \cline{5-7} \cline{10-11}
+\multicolumn{1}{|c|}{4}                            & \multicolumn{2}{c|}{162}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{4}                              & \multicolumn{2}{c|}{70564}                                  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{68589} & \multicolumn{1}{c|}{68403} & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          \\ \cline{1-3} \cline{5-7} \cline{9-13} 
+\multicolumn{1}{|c|}{5}                            & \multicolumn{2}{c|}{184}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{5}                              & \multicolumn{2}{c|}{70431}                                  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{\multirow{2}{*}{3}} & \multicolumn{1}{c|}{67405} & \multicolumn{1}{c|}{67219} & \multicolumn{1}{c|}{\multirow{2}{*}{-0,05153}} & \multicolumn{1}{c|}{\multirow{2}{*}{0,00015}} \\ \cline{1-3} \cline{5-7} \cline{10-11}
+\multicolumn{1}{|c|}{6}                            & \multicolumn{2}{c|}{155}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{6}                              & \multicolumn{2}{c|}{70547}                                  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{67525} & \multicolumn{1}{c|}{67339} & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          \\ \cline{1-3} \cline{5-7} \cline{9-13} 
+\multicolumn{1}{|c|}{7}                            & \multicolumn{2}{c|}{178}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{7}                              & \multicolumn{2}{c|}{70740}                                  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{\multirow{2}{*}{4}} & \multicolumn{1}{c|}{66868} & \multicolumn{1}{c|}{66682} & \multicolumn{1}{c|}{\multirow{2}{*}{-0,0618}}  & \multicolumn{1}{c|}{\multirow{2}{*}{0,00019}} \\ \cline{1-3} \cline{5-7} \cline{10-11}
+\multicolumn{1}{|c|}{8}                            & \multicolumn{2}{c|}{208}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{8}                              & \multicolumn{2}{c|}{70824}                                  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{66688} & \multicolumn{1}{c|}{66502} & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          \\ \cline{1-3} \cline{5-7} \cline{9-13} 
+\multicolumn{1}{|c|}{9}                            & \multicolumn{2}{c|}{222}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{9}                              & \multicolumn{2}{c|}{71038}                                  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{\multirow{2}{*}{5}} & \multicolumn{1}{c|}{65286} & \multicolumn{1}{c|}{65100} & \multicolumn{1}{c|}{\multirow{2}{*}{-0,08792}} & \multicolumn{1}{c|}{\multirow{2}{*}{0,00026}} \\ \cline{1-3} \cline{5-7} \cline{10-11}
+\multicolumn{1}{|c|}{10}                           & \multicolumn{2}{c|}{177}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{10}                             & \multicolumn{2}{c|}{70520}                                  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                   & \multicolumn{1}{c|}{64836} & \multicolumn{1}{c|}{64650} & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          \\ \cline{1-3} \cline{5-7} \cline{9-13} 
+\multicolumn{1}{|c|}{11}                           & \multicolumn{2}{c|}{184}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{11}                             & \multicolumn{2}{c|}{71432}                                  &                       &                                         &                            &                            &                                                &                                                \\ \cline{1-3} \cline{5-7}
+\multicolumn{1}{|c|}{12}                           & \multicolumn{2}{c|}{179}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{12}                             & \multicolumn{2}{c|}{70555}                                  &                       &                                         &                            &                            &                                                &                                                \\ \cline{1-3} \cline{5-7}
+\multicolumn{1}{|c|}{13}                           & \multicolumn{2}{c|}{156}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{13}                             & \multicolumn{2}{c|}{70943}                                  &                       &                                         &                            &                            &                                                &                                                \\ \cline{1-3} \cline{5-7}
+\multicolumn{1}{|c|}{14}                           & \multicolumn{2}{c|}{221}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{14}                             & \multicolumn{2}{c|}{71393}                                  &                       &                                         &                            &                            &                                                &                                                \\ \cline{1-3} \cline{5-7}
+\multicolumn{1}{|c|}{15}                           & \multicolumn{2}{c|}{201}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{15}                             & \multicolumn{2}{c|}{71001}                                  &                       &                                         &                            &                            &                                                &                                                \\ \cline{1-3} \cline{5-7}
+\multicolumn{1}{|c|}{16}                           & \multicolumn{2}{c|}{177}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{16}                             & \multicolumn{2}{c|}{70860}                                  &                       &                                         &                            &                            &                                                &                                                \\ \cline{1-3} \cline{5-7}
+\multicolumn{1}{|c|}{17}                           & \multicolumn{2}{c|}{194}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{17}                             & \multicolumn{2}{c|}{71348}                                  &                       &                                         &                            &                            &                                                &                                                \\ \cline{1-3} \cline{5-7}
+\multicolumn{1}{|c|}{18}                           & \multicolumn{2}{c|}{199}                                & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{18}                             & \multicolumn{2}{c|}{70783}                                  &                       &                                         &                            &                            &                                                &                                                \\ \cline{1-3} \cline{5-7}
+\multicolumn{1}{|c|}{19}                           & \multicolumn{2}{c|}{163}                                &                       &                                                     &                              &                              &                       &                                         &                            &                            &                                                &                                                \\ \cline{1-3}
+\multicolumn{1}{|c|}{20}                           & \multicolumn{2}{c|}{221}                                &                       &                                                     &                              &                              &                       &                                         &                            &                            &                                                &                                                \\ \cline{1-3}
+\end{tabular}
+\end{table}
+
+\newpage
+$ $
+\newpage
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[h]
+\begin{tabular}{cccccccccccc|ccccc|}
+\cline{1-5} \cline{7-11} \cline{13-17}
+\multicolumn{5}{|c|}{\multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}Зависимость фона от количества \\ алюминеевых цилиндров\end{tabular}}}                                                               & \multicolumn{1}{c|}{} & \multicolumn{5}{c|}{\multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}Зависимость   фона от количества \\ железных цилиндров\end{tabular}}}                                                                   &  & \multicolumn{5}{c|}{\multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}Зависимость   фона от количества \\ свинцовых цилиндров\end{tabular}}}                                             \\
+\multicolumn{5}{|c|}{}                                                                                                                                                                               & \multicolumn{1}{c|}{} & \multicolumn{5}{c|}{}                                                                                                                                                                                  &  & \multicolumn{5}{c|}{}                                                                                                                                                             \\
+\multicolumn{5}{|c|}{}                                                                                                                                                                               & \multicolumn{1}{c|}{} & \multicolumn{5}{c|}{}                                                                                                                                                                                  &  & \multicolumn{5}{c|}{}                                                                                                                                                             \\ \cline{1-5} \cline{7-11} \cline{13-17} 
+\multicolumn{1}{|c|}{№}                  & \multicolumn{1}{c|}{Nф}    & \multicolumn{1}{c|}{N}     & \multicolumn{1}{c|}{ln(N/N0)}                  & \multicolumn{1}{c|}{$\Delta ln(N/N0)$}                 & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{№}                   & \multicolumn{1}{c|}{Nф}    & \multicolumn{1}{c|}{N}     & \multicolumn{1}{c|}{ln(N/N0)}                   & \multicolumn{1}{c|}{$\Delta ln(N/N0)$}                  &  & \multicolumn{1}{c|}{№}                   & \multicolumn{1}{c|}{Nф}    & \multicolumn{1}{c|}{N}     & \multicolumn{1}{c|}{ln(N/N0)}                   & $\Delta ln(N/N0)$                  \\ \cline{1-5} \cline{7-11} \cline{13-17} 
+\multicolumn{1}{|c|}{\multirow{3}{*}{1}} & \multicolumn{1}{c|}{47259} & \multicolumn{1}{c|}{47073} & \multicolumn{1}{c|}{\multirow{3}{*}{-0,4066}}  & \multicolumn{1}{c|}{\multirow{3}{*}{0,00122}} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{\multirow{3}{*}{1}}  & \multicolumn{1}{c|}{39775} & \multicolumn{1}{c|}{39589} & \multicolumn{1}{c|}{\multirow{3}{*}{-0,57318}}  & \multicolumn{1}{c|}{\multirow{3}{*}{0,00172}}  &  & \multicolumn{1}{c|}{\multirow{3}{*}{1}}  & \multicolumn{1}{c|}{39304} & \multicolumn{1}{c|}{39118} & \multicolumn{1}{c|}{\multirow{3}{*}{-0,58785}}  & \multirow{3}{*}{0,00176}  \\ \cline{2-3} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{47479} & \multicolumn{1}{c|}{47293} & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{40139} & \multicolumn{1}{c|}{39953} & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{39747} & \multicolumn{1}{c|}{39561} & \multicolumn{1}{c|}{}                           &                            \\ \cline{2-3} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{47333} & \multicolumn{1}{c|}{47147} & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{39885} & \multicolumn{1}{c|}{39699} & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{39561} & \multicolumn{1}{c|}{39375} & \multicolumn{1}{c|}{}                           &                            \\ \cline{1-5} \cline{7-11} \cline{13-17} 
+\multicolumn{1}{|c|}{\multirow{3}{*}{2}} & \multicolumn{1}{c|}{31603} & \multicolumn{1}{c|}{31417} & \multicolumn{1}{c|}{\multirow{3}{*}{-0,80914}} & \multicolumn{1}{c|}{\multirow{3}{*}{0,00243}} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{\multirow{4}{*}{2}}  & \multicolumn{1}{c|}{22540} & \multicolumn{1}{c|}{22354} & \multicolumn{1}{c|}{\multirow{4}{*}{-1,15667}}  & \multicolumn{1}{c|}{\multirow{4}{*}{0,00347}}  &  & \multicolumn{1}{c|}{\multirow{4}{*}{2}}  & \multicolumn{1}{c|}{24069} & \multicolumn{1}{c|}{23883} & \multicolumn{1}{c|}{\multirow{4}{*}{-1,09835}}  & \multirow{4}{*}{0,0033}   \\ \cline{2-3} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{31849} & \multicolumn{1}{c|}{31663} & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{22100} & \multicolumn{1}{c|}{21914} & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{23865} & \multicolumn{1}{c|}{23679} & \multicolumn{1}{c|}{}                           &                            \\ \cline{2-3} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{31725} & \multicolumn{1}{c|}{31539} & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{22432} & \multicolumn{1}{c|}{22246} & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{23510} & \multicolumn{1}{c|}{23324} & \multicolumn{1}{c|}{}                           &                            \\ \cline{1-5} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{\multirow{4}{*}{3}} & \multicolumn{1}{c|}{20600} & \multicolumn{1}{c|}{20414} & \multicolumn{1}{c|}{\multirow{4}{*}{-1,2362}}  & \multicolumn{1}{c|}{\multirow{4}{*}{0,00371}} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{22794} & \multicolumn{1}{c|}{22608} & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{23774} & \multicolumn{1}{c|}{23588} & \multicolumn{1}{c|}{}                           &                            \\ \cline{2-3} \cline{7-11} \cline{13-17} 
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{20898} & \multicolumn{1}{c|}{20712} & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{\multirow{5}{*}{3}}  & \multicolumn{1}{c|}{13062} & \multicolumn{1}{c|}{12876} & \multicolumn{1}{c|}{\multirow{5}{*}{-1,71059}}  & \multicolumn{1}{c|}{\multirow{5}{*}{0,00513}}  &  & \multicolumn{1}{c|}{\multirow{5}{*}{3}}  & \multicolumn{1}{c|}{13383} & \multicolumn{1}{c|}{13197} & \multicolumn{1}{c|}{\multirow{5}{*}{-1,66777}}  & \multirow{5}{*}{0,005}    \\ \cline{2-3} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{20754} & \multicolumn{1}{c|}{20568} & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{12928} & \multicolumn{1}{c|}{12742} & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{13772} & \multicolumn{1}{c|}{13586} & \multicolumn{1}{c|}{}                           &                            \\ \cline{2-3} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{20801} & \multicolumn{1}{c|}{20615} & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{13014} & \multicolumn{1}{c|}{12828} & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{13372} & \multicolumn{1}{c|}{13186} & \multicolumn{1}{c|}{}                           &                            \\ \cline{1-5} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{\multirow{5}{*}{4}} & \multicolumn{1}{c|}{14162} & \multicolumn{1}{c|}{13976} & \multicolumn{1}{c|}{\multirow{5}{*}{-1,63178}} & \multicolumn{1}{c|}{\multirow{5}{*}{0,0049}}  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{12831} & \multicolumn{1}{c|}{12645} & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{13689} & \multicolumn{1}{c|}{13503} & \multicolumn{1}{c|}{}                           &                            \\ \cline{2-3} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{14114} & \multicolumn{1}{c|}{13928} & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{13117} & \multicolumn{1}{c|}{12931} & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{13537} & \multicolumn{1}{c|}{13351} & \multicolumn{1}{c|}{}                           &                            \\ \cline{2-3} \cline{7-11} \cline{13-17} 
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{13882} & \multicolumn{1}{c|}{13696} & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{\multirow{10}{*}{4}} & \multicolumn{1}{c|}{7380}  & \multicolumn{1}{c|}{7194}  & \multicolumn{1}{c|}{\multirow{10}{*}{-2,29603}} & \multicolumn{1}{c|}{\multirow{10}{*}{0,00689}} &  & \multicolumn{1}{c|}{\multirow{12}{*}{4}} & \multicolumn{1}{c|}{7810}  & \multicolumn{1}{c|}{7624}  & \multicolumn{1}{c|}{\multirow{12}{*}{-2,23809}} & \multirow{12}{*}{0,00671} \\ \cline{2-3} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{13989} & \multicolumn{1}{c|}{13803} & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7210}  & \multicolumn{1}{c|}{7024}  & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7703}  & \multicolumn{1}{c|}{7517}  & \multicolumn{1}{c|}{}                           &                            \\ \cline{2-3} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{14055} & \multicolumn{1}{c|}{13869} & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7353}  & \multicolumn{1}{c|}{7167}  & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7834}  & \multicolumn{1}{c|}{7648}  & \multicolumn{1}{c|}{}                           &                            \\ \cline{1-5} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{\multirow{7}{*}{5}} & \multicolumn{1}{c|}{9492}  & \multicolumn{1}{c|}{9306}  & \multicolumn{1}{c|}{\multirow{7}{*}{-2,04082}} & \multicolumn{1}{c|}{\multirow{7}{*}{0,00612}} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7618}  & \multicolumn{1}{c|}{7432}  & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7839}  & \multicolumn{1}{c|}{7653}  & \multicolumn{1}{c|}{}                           &                            \\ \cline{2-3} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{9339}  & \multicolumn{1}{c|}{9153}  & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7132}  & \multicolumn{1}{c|}{6946}  & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7542}  & \multicolumn{1}{c|}{7356}  & \multicolumn{1}{c|}{}                           &                            \\ \cline{2-3} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{9436}  & \multicolumn{1}{c|}{9250}  & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7298}  & \multicolumn{1}{c|}{7112}  & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7760}  & \multicolumn{1}{c|}{7574}  & \multicolumn{1}{c|}{}                           &                            \\ \cline{2-3} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{9325}  & \multicolumn{1}{c|}{9139}  & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7189}  & \multicolumn{1}{c|}{7003}  & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7656}  & \multicolumn{1}{c|}{7470}  & \multicolumn{1}{c|}{}                           &                            \\ \cline{2-3} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{9401}  & \multicolumn{1}{c|}{9215}  & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7232}  & \multicolumn{1}{c|}{7046}  & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7740}  & \multicolumn{1}{c|}{7554}  & \multicolumn{1}{c|}{}                           &                            \\ \cline{2-3} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{9352}  & \multicolumn{1}{c|}{9166}  & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7421}  & \multicolumn{1}{c|}{7235}  & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7802}  & \multicolumn{1}{c|}{7616}  & \multicolumn{1}{c|}{}                           &                            \\ \cline{2-3} \cline{8-9} \cline{14-15}
+\multicolumn{1}{|c|}{}                   & \multicolumn{1}{c|}{9380}  & \multicolumn{1}{c|}{9194}  & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{}                          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7330}  & \multicolumn{1}{c|}{7144}  & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{}                           &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7779}  & \multicolumn{1}{c|}{7593}  & \multicolumn{1}{c|}{}                           &                            \\ \cline{1-5} \cline{7-11} \cline{14-15}
+                                         &                            &                            &                                                &                                                &                       &                                          &                            &                            &                                                 &                                                 &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7751}  & \multicolumn{1}{c|}{7565}  & \multicolumn{1}{c|}{}                           &                            \\ \cline{14-15}
+                                         &                            &                            &                                                &                                                &                       &                                          &                            &                            &                                                 &                                                 &  & \multicolumn{1}{c|}{}                    & \multicolumn{1}{c|}{7683}  & \multicolumn{1}{c|}{7497}  & \multicolumn{1}{c|}{}                           &                            \\ \cline{13-17} 
+\end{tabular}
+\end{table}
+
+\newpage
+$ $
+\newpage
+\begin{figure}[h]
+\includegraphics[scale = 0.45]{G.jpg}
+\caption{График зависимости ln(N/N0) от l см}
+\end{figure}
+
+\end{document}

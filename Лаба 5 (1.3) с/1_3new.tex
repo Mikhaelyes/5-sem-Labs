@@ -1,0 +1,286 @@
+\documentclass[%
+ reprint,
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+%preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,amssymb,
+ aps,
+%pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-2}
+\usepackage{multirow}
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+\usepackage[utf8x]{inputenc} % Включаем поддержку UTF8  
+\usepackage[russian]{babel}  % Включаем пакет для поддержки русского языка 
+\usepackage[normalem]{ulem}  % для зачекивания текста
+
+\usepackage[noend]{algorithmic}
+\def\algorithmicrequire{\textbf{Вход:}}
+\def\algorithmicensure{\textbf{Выход:}}
+\def\algorithmicif{\textbf{если}}
+\def\algorithmicthen{\textbf{то}}
+\def\algorithmicelse{\textbf{иначе}}
+\def\algorithmicelsif{\textbf{иначе если}}
+\def\algorithmicfor{\textbf{для}}
+\def\algorithmicforall{\textbf{для всех}}
+\def\algorithmicdo{}
+\def\algorithmicwhile{\textbf{пока}}
+\def\algorithmicrepeat{\textbf{повторять}}
+\def\algorithmicuntil{\textbf{пока}}
+\def\algorithmicloop{\textbf{цикл}}
+% переопределение стиля комментариев
+\def\algorithmiccomment#1{\quad// {\sl #1}}
+\usepackage{caption}
+
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+\begin{document}
+
+
+
+\title{Лабораторная работа 1.3\\Изучение рассеяния медленных электронов на атомах (эффект Рамзауэра)}% Force line breaks with \\
+
+
+
+\author{Васильев Михаил Владимирович}
+\affiliation{%
+ Студент 3 курса РТ\\
+}%
+
+\collaboration{Московский физико-технический институт}%\noaffiliation
+
+\date{\today}% It is always \today, today,
+             %  but any date may be explicitly specified
+             
+
+\begin{abstract}
+Исследуется энергетическая зависимость вероятности рассеяния электронов атомами ксенона, определяются энергии электронов, при которых наблюдается "просветление" ксенона, и оценивается размер его внешней электронной оболочки.  
+\begin{description}
+\item[Оборудование]
+Тиратрон ТГ3-01/1.3Б, осциллограф, стабилизированный БНС.
+\end{description}
+\end{abstract}
+
+%\keywords{Suggested keywords}%Use showkeys class option if keyword
+                              %display desired
+\maketitle
+
+%\tableofcontents
+
+\section{Теоретическая часть.}
+
+Вводится понятие эффективного сечения реакции $\sigma = \frac{N}{nv}$, характеризующая вероятность перехода системы из двух сталкивающихся частич в определенное состояние, в результате их рассеяния. Знаменатель равен плотности потока всех рассеиваемых частиц, числитель - число таких переходов.
+К. Рамзауэр исследовал зависимость поперечных сечений упрогого рассеяния электронов (с энергией до 10 ЭВ) на атомах аргона. В результате этих исследований было обнаружено явление, получившее название \textit{эффекта Рамзауэра}.
+
+С точки зрения квантовой теории атом по отношению к электронной волне ведет себя как преломляющая среда с относительным показателем преломления
+\begin{equation*}
+n = \frac{\lambda}{\lambda^\prime} = \sqrt{1-\frac{U}{E}},
+\end{equation*}
+где $U$, $E$ -- соответственно потенциальная и полная энергии электрона внутри атома.
+
+Будем считать, что электрон рассеивается на одномерной прямоугольной потенциальной яме конечной глубины. Такая модель является хорошим приближением для атомов тяжелых инертных газов, отличающихся наиболее компактной структурой и резкой внешней границей. Решение задачи о прохождении частицы с энергией $E$ над потенциальной ямой шириной $l$ и глубиной $U_0$ не составит труда найти из уравнения Шредингера:\\
+\begin{equation*}
+\psi^{\prime\prime}+k^2\psi=0, \ \text{где}\
+k^2 =\begin{cases}
+2mE/\hbar^2 & x<0, x>l\\
+(2mE+U_0)/\hbar^2 & 0<x<l
+\end{cases}.
+\end{equation*}
+Коэффициент прохождения равен отношению квадратов амплитуд прошедшей и падающей волн и определяется выражением:
+\begin{equation*}
+\frac{1}{D} = 1 + \frac{U_0^2}{4E(E+U_0)}\sin^2(k_2l).
+\end{equation*}
+Минимум последнего выражения отвечает квантовому аналогу просветления оптики, так как при выполнении условия
+\begin{equation*}
+\tag{$\star$}
+\label{eq:uslovie}
+\sqrt{\frac{2m(E+U_0)}{\hbar^2}}l = \pi n, \ n\in\mathbb{N},
+\end{equation*}
+коэффициент прохождения частицы над ямой становится равным единице, то есть достигает своего максимального значения.
+Отметим, что условие~(\ref{eq:uslovie}) легко получить, рассматривая интерференцию электронов волн де Бройля в атоме:\\
+\begin{itemize}
+	\item
+	Условие первого интерференционного максимума:
+	\begin{equation}
+	\label{eq:1}
+	2l = \frac{h}{\sqrt{2m(E_1+U_0)}}.
+	\end{equation}
+	\item
+	Условие первого интерференционного минимума:
+	\begin{equation}
+	\label{eq:2}
+	2l =\frac{3}{2} \frac{h}{\sqrt{2m(E_1+U_0)}}.
+	\end{equation}			
+\end{itemize}
+
+Решая совместно уравнения~(\ref{eq:1}, \ref{eq:2}) можно получить:
+\begin{equation}
+\label{eq:l}
+l = \frac{h\sqrt{5}}{\sqrt{32m(E_2-E_1)}}.
+\end{equation}
+Понятно, что энергии $E_1$ и $E_2$ соответствуют энергиям электронов, прошедших разность потенциалов $V_1$ и $V_2$, то есть $E_1 = eV_1$ и $E_2 = eV_2$. 
+
+По измеренным величинам $E_1$ и $E_2$, используя формулы~(\ref{eq:1}, \ref{eq:2}), можно рассчитать эффективную глубину потенциальной ямы атома:
+\begin{equation}
+\label{eq:U_0}
+U_0 = \frac{4}{5}E_2 - \frac{9}{5}E_1
+\end{equation}
+
+Согласно квантовой механике зависимость вероятности рассеяния электрона от его энергии можно определить из соотношения:
+\begin{equation}
+\label{eq:w}
+w(U) = -\frac{1}{C}\ln \frac{I(U)}{I_0},
+\end{equation}
+где $I_0$ -- ток катода, а $C$ -- некторая постоянная.
+
+\section{Экспериментальная установка}
+Принципиальная схема установки для изучения эффекта Рамзауэра приведена на рис.1. На лампу Л подаётся синусоидальное напряжение частоты 50 Гц от источника питания Г34, БНС - стабилизованый блок накала лампы; исследуемый сигнал подаётся на электронный осциллограф (ЭО); цифрами обозначены номера ножек лампы. 
+
+Реально на экране ЭО удаётся надёжно наблюдать лишь один минимум в сечении рассеивания электронов и следующий за ним максимум. Дело в том, что уже при  $n = 2$ происходит пробой. 
+
+Схема экспериментальной установки, изображённой на рис.3 в нашей работе конструктивно осуществлена следующим образом. Лампа-тиратрон ТГЗ-01/1.3Б, заполнена инертным газом, расположена на БИП. Напряжение к электродам лампы подаётся от источников питания, находящихся на корпусе прибора. Регулировка напряжения и выбор режима работы установки производиться при помощи ручек управления на рис.2.
+
+
+\begin{figure}[h!]
+\includegraphics[scale = 0.45]{3.png}
+\caption{Схема включения тиратрона (Л), модулирующего переменного напряжения и осциллогра а (ЭО) для изучения эффекта Рамзауэра. БНС -- стабилизированный блок накала электрода; цифрами обозначены номера ножек лампы}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale = 0.35]{4.png}
+\caption{Блок-схема экспериментальной установки}
+\end{figure}
+
+В данной работе для изучения эффекта Рамзауэра используется тиратрон Т 3-01/1.3Б, заполненный инертным газом. Схематическое изображение тиратрона и его конструкция приведены на рис. 3. Электроны, эмитируемые катодом тиратрона, ускоряются напряжением V, приложенным между катодом и ближайшей к нему сеткой. Затем электроны рассеиваются на атомах инертного газа (ксенона). Все сетки 1, 2, 3 соединены между собой и имеют одинаковый потенциал, примерно равный потенциалу анода 6. Поэтому между первой сеткой 1 и анодом практически нет поля. Рассеянные электроны отклоняются в сторону и уходят на сетку, а оставшаяся часть электронов достигает анода и создает анодный ток Iа. Таким образом, поток электронов N(x) на расстоянии x от ускоряющей сетки (т.е. число электронов, проходящих через поперечное сечение лампы в точке в единицу времени) уменьшается с ростом x от начального значения $N_0$ у катода (в точке $x = 0$) до некоторого значения $N_a$ у анода (в точке $x = L$).
+\begin{figure}[h!]
+\includegraphics[scale = 0.45]{5.png}
+\caption{Схематическое изображение тиратрона (слева) и его конструкция (справа): 1, 2, 3 -- сетки; 4 -- внешний металлический цилиндр; 5 -- катод; 6 -- анод; 7 -- накаливаемая спираль}
+\end{figure}
+
+
+\section{Методика измерений}
+В эксперименте будем исследовать ВАХ двумя методами: статическими и динамическим. В статическом методе будем снимать показания напряжения с вольтметра и амперметра при различных значениях напряжения анода, в динамическом методе сразу используем картину на осциллографе. 
+
+
+\section{Основные результаты и их обсуждение.}
+Имеем 2 таблицы основным результатов.
+По данным строятся вольт-амперные характеристики для синего $U_\text{н} = 2.63$ В и красного $U_\text{н} = 2.89$ В и зависимость вероятности рассеивания от напряжения. Определяем по напряжению пробоя $U_\text{п} = 12.1$ В, что лампа заполнена ксеноном. Определим глубину потенциальной ямы $U_\text{я} = 2.64 \pm 0,05$ эВ.
+
+\newpage
+\section{Заключение.}
+Были доказаны доказаны квантовые свойства света на эффекте Рамзауэра, простроены ВАХ и зависимость вероятности рассеивания от напряжения, был определён инертный газ в лампе. Выводы хорошо согласуются с теорией. 
+
+
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{1.jpg}
+\caption{ВАХ при Uн = 2.63 В  (красный) и при Uн = 2.89 В (синий)}
+\end{figure}
+
+\newpage
+$ $
+\newpage
+
+\begin{figure}[]
+\includegraphics[scale=0.5]{2.jpg}
+\caption{Зависимость вероятности рассеивания электрона от напряжения анода $\omega$ при Uн = 2.63 В  (красный) и при Uн = 2.89 В (синий)}
+\end{figure}
+
+\newpage
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+\begin{tabular}{llllll|l|l|l|l|l|}
+\cline{1-5} \cline{7-11}
+\multicolumn{5}{|c|}{\multirow{2}{*}{ВАХ и $\omega$ при Uн = 2.63 В}}                                                                                            &  & \multicolumn{5}{c|}{\multirow{2}{*}{ВАХ и $\omega$ при   Uн = 2.89 В}} \\
+\multicolumn{5}{|c|}{}                                                                                                                                  &  & \multicolumn{5}{c|}{}                                         \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{Vi, мВ} & \multicolumn{1}{l|}{V, В}  & \multicolumn{1}{l|}{I, мкА} & \multicolumn{1}{l|}{$\omega$}        & \multicolumn{1}{l|}{$\Delta\omega$}       &  & Vi, мВ     & V, В     & I, мкА    & $\omega$           & $\Delta\omega$          \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{0}      & \multicolumn{1}{l|}{0,32}  & \multicolumn{1}{l|}{0}      & \multicolumn{1}{l|}{1}        & \multicolumn{1}{l|}{0}        &  & 0          & 0,3      & 0         & 1           & 0           \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{0}      & \multicolumn{1}{l|}{0,6}   & \multicolumn{1}{l|}{0}      & \multicolumn{1}{l|}{1}        & \multicolumn{1}{l|}{0}        &  & 0          & 0,6      & 0         & 1           & 0           \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{0}      & \multicolumn{1}{l|}{0,9}   & \multicolumn{1}{l|}{0}      & \multicolumn{1}{l|}{1}        & \multicolumn{1}{l|}{0}        &  & 0          & 0,9      & 0         & 1           & 0           \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{0}      & \multicolumn{1}{l|}{1,2}   & \multicolumn{1}{l|}{0}      & \multicolumn{1}{l|}{1}        & \multicolumn{1}{l|}{0}        &  & 0          & 1,2      & 0         & 1           & 0           \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{0}      & \multicolumn{1}{l|}{1,5}   & \multicolumn{1}{l|}{0}      & \multicolumn{1}{l|}{1}        & \multicolumn{1}{l|}{0}        &  & 0          & 1,5      & 0         & 1           & 0           \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{0}      & \multicolumn{1}{l|}{1,8}   & \multicolumn{1}{l|}{0}      & \multicolumn{1}{l|}{1}        & \multicolumn{1}{l|}{0}        &  & 0          & 1,8      & 0         & 1           & 0           \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{0}      & \multicolumn{1}{l|}{2,2}   & \multicolumn{1}{l|}{0}      & \multicolumn{1}{l|}{1}        & \multicolumn{1}{l|}{0}        &  & 0          & 2,12     & 0         & 1           & 0           \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{0}      & \multicolumn{1}{l|}{2,29}  & \multicolumn{1}{l|}{0}      & \multicolumn{1}{l|}{1}        & \multicolumn{1}{l|}{0}        &  & 0,1        & 2,21     & 1         & 0,999494    & 0,029633    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{0,53}   & \multicolumn{1}{l|}{2,42}  & \multicolumn{1}{l|}{5,3}    & \multicolumn{1}{l|}{0,992639} & \multicolumn{1}{l|}{0,029633} &  & 0,7        & 2,33     & 7         & 0,703312    & 0,019382    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{1,4}    & \multicolumn{1}{l|}{2,51}  & \multicolumn{1}{l|}{14}     & \multicolumn{1}{l|}{0,765688} & \multicolumn{1}{l|}{0,019382} &  & 2,5        & 2,44     & 25        & 0,509558    & 0,009944    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{4,4}    & \multicolumn{1}{l|}{2,6}   & \multicolumn{1}{l|}{44}     & \multicolumn{1}{l|}{0,498134} & \multicolumn{1}{l|}{0,009944} &  & 5,8        & 2,51     & 58        & 0,381466    & 0,004888    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{10,1}   & \multicolumn{1}{l|}{2,71}  & \multicolumn{1}{l|}{101}    & \multicolumn{1}{l|}{0,303991} & \multicolumn{1}{l|}{0,004888} &  & 12,7       & 2,62     & 127       & 0,262174    & 0,002395    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{17,4}   & \multicolumn{1}{l|}{2,79}  & \multicolumn{1}{l|}{174}    & \multicolumn{1}{l|}{0,176903} & \multicolumn{1}{l|}{0,002395} &  & 21,6       & 2,73     & 216       & 0,181339    & 0,002033    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{19,1}   & \multicolumn{1}{l|}{2,82}  & \multicolumn{1}{l|}{191}    & \multicolumn{1}{l|}{0,155124} & \multicolumn{1}{l|}{0,002033} &  & 29,2       & 2,81     & 292       & 0,135452    & 0,00091     \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{26,5}   & \multicolumn{1}{l|}{2,91}  & \multicolumn{1}{l|}{265}    & \multicolumn{1}{l|}{0,078615} & \multicolumn{1}{l|}{0,00091}  &  & 38,8       & 2,91     & 388       & 0,092187    & 0,00025     \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{33,5}   & \multicolumn{1}{l|}{3,02}  & \multicolumn{1}{l|}{335}    & \multicolumn{1}{l|}{0,023848} & \multicolumn{1}{l|}{0,00025}  &  & 48,3       & 3,04     & 483       & 0,058852    & 0           \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{37,1}   & \multicolumn{1}{l|}{3,11}  & \multicolumn{1}{l|}{371}    & \multicolumn{1}{l|}{0}        & \multicolumn{1}{l|}{0}        &  & 53,6       & 3,23     & 536       & 0,043004    & -0,00011    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{39}     & \multicolumn{1}{l|}{3,2}   & \multicolumn{1}{l|}{390}    & \multicolumn{1}{l|}{-0,01167} & \multicolumn{1}{l|}{-0,00011} &  & 55,6       & 3,51     & 556       & 0,037428    & 0,000564    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{29,8}   & \multicolumn{1}{l|}{3,3}   & \multicolumn{1}{l|}{298}    & \multicolumn{1}{l|}{0,051194} & \multicolumn{1}{l|}{0,000564} &  & 51,4       & 3,81     & 514       & 0,049383    & 0,00022     \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{33,9}   & \multicolumn{1}{l|}{3,33}  & \multicolumn{1}{l|}{339}    & \multicolumn{1}{l|}{0,021075} & \multicolumn{1}{l|}{0,00022}  &  & 64,9       & 4,02     & 649       & 0,013887    & 0,000242    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{33,6}   & \multicolumn{1}{l|}{3,61}  & \multicolumn{1}{l|}{336}    & \multicolumn{1}{l|}{0,023152} & \multicolumn{1}{l|}{0,000242} &  & 65,7       & 4,1      & 657       & 0,012023    & 0,000296    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{32,9}   & \multicolumn{1}{l|}{3,92}  & \multicolumn{1}{l|}{329}    & \multicolumn{1}{l|}{0,028071} & \multicolumn{1}{l|}{0,000296} &  & 66,6       & 4,21     & 666       & 0,009952    & 0,000345    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{32,3}   & \multicolumn{1}{l|}{4,22}  & \multicolumn{1}{l|}{323}    & \multicolumn{1}{l|}{0,032371} & \multicolumn{1}{l|}{0,000345} &  & 67,3       & 4,31     & 673       & 0,00836     & 0,000491    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{30,6}   & \multicolumn{1}{l|}{4,52}  & \multicolumn{1}{l|}{306}    & \multicolumn{1}{l|}{0,045004} & \multicolumn{1}{l|}{0,000491} &  & 68,4       & 4,45     & 684       & 0,005893    & 0,000574    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{29,7}   & \multicolumn{1}{l|}{4,8}   & \multicolumn{1}{l|}{297}    & \multicolumn{1}{l|}{0,051979} & \multicolumn{1}{l|}{0,000574} &  & 69,1       & 4,61     & 691       & 0,004343    & 0,000622    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{29,2}   & \multicolumn{1}{l|}{5,11}  & \multicolumn{1}{l|}{292}    & \multicolumn{1}{l|}{0,055946} & \multicolumn{1}{l|}{0,000622} &  & 69,5       & 4,71     & 695       & 0,003464    & 0,000632    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{29,1}   & \multicolumn{1}{l|}{5,41}  & \multicolumn{1}{l|}{291}    & \multicolumn{1}{l|}{0,056747} & \multicolumn{1}{l|}{0,000632} &  & 69,9       & 4,84     & 699       & 0,002591    & 0,000765    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{27,8}   & \multicolumn{1}{l|}{5,73}  & \multicolumn{1}{l|}{278}    & \multicolumn{1}{l|}{0,067425} & \multicolumn{1}{l|}{0,000765} &  & 70,2       & 4,93     & 702       & 0,001939    & 0,000898    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{26,6}   & \multicolumn{1}{l|}{6,01}  & \multicolumn{1}{l|}{266}    & \multicolumn{1}{l|}{0,077735} & \multicolumn{1}{l|}{0,000898} &  & 70,5       & 5,01     & 705       & 0,00129     & 0,001042    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{25,4}   & \multicolumn{1}{l|}{6,31}  & \multicolumn{1}{l|}{254}    & \multicolumn{1}{l|}{0,088521} & \multicolumn{1}{l|}{0,001042} &  & 71,1       & 5,11     & 711       & 0           & 0,001239    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{23,9}   & \multicolumn{1}{l|}{6,65}  & \multicolumn{1}{l|}{239}    & \multicolumn{1}{l|}{0,102743} & \multicolumn{1}{l|}{0,001239} &  & 70,4       & 5,22     & 704       & 0,001506    & 0,001381    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{22,9}   & \multicolumn{1}{l|}{6,9}   & \multicolumn{1}{l|}{229}    & \multicolumn{1}{l|}{0,112729} & \multicolumn{1}{l|}{0,001381} &  & 70,1       & 5,33     & 701       & 0,002156    & 0,001616    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{21,4}   & \multicolumn{1}{l|}{7,21}  & \multicolumn{1}{l|}{214}    & \multicolumn{1}{l|}{0,128557} & \multicolumn{1}{l|}{0,001616} &  & 70,2       & 5,4      & 702       & 0,001939    & 0,001879    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{19,9}   & \multicolumn{1}{l|}{7,51}  & \multicolumn{1}{l|}{199}    & \multicolumn{1}{l|}{0,145537} & \multicolumn{1}{l|}{0,001879} &  & 70,8       & 5,53     & 708       & 0,000644    & 0,002134    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{18,6}   & \multicolumn{1}{l|}{7,84}  & \multicolumn{1}{l|}{186}    & \multicolumn{1}{l|}{0,161321} & \multicolumn{1}{l|}{0,002134} &  & 69,5       & 5,75     & 695       & 0,003464    & 0,002388    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{17,43}  & \multicolumn{1}{l|}{8,13}  & \multicolumn{1}{l|}{174,3}  & \multicolumn{1}{l|}{0,176501} & \multicolumn{1}{l|}{0,002388} &  & 69,4       & 5,84     & 694       & 0,003683    & 0,002635    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{16,4}   & \multicolumn{1}{l|}{8,44}  & \multicolumn{1}{l|}{164}    & \multicolumn{1}{l|}{0,190733} & \multicolumn{1}{l|}{0,002635} &  & 69,3       & 5,92     & 693       & 0,003903    & 0,002817    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{15,7}   & \multicolumn{1}{l|}{8,72}  & \multicolumn{1}{l|}{157}    & \multicolumn{1}{l|}{0,200924} & \multicolumn{1}{l|}{0,002817} &  & 45,3       & 6,13     & 453       & 0,068612    & 0,00261     \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{16,5}   & \multicolumn{1}{l|}{9,01}  & \multicolumn{1}{l|}{165}    & \multicolumn{1}{l|}{0,189312} & \multicolumn{1}{l|}{0,00261}  &  & 63,2       & 6,52     & 632       & 0,017927    & 0,002536    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{16,8}   & \multicolumn{1}{l|}{9,16}  & \multicolumn{1}{l|}{168}    & \multicolumn{1}{l|}{0,185102} & \multicolumn{1}{l|}{0,002536} &  & 61,1       & 6,81     & 611       & 0,023071    & 0,002763    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{15,9}   & \multicolumn{1}{l|}{9,25}  & \multicolumn{1}{l|}{159}    & \multicolumn{1}{l|}{0,197967} & \multicolumn{1}{l|}{0,002763} &  & 58,3       & 7,11     & 583       & 0,030211    & 0,002817    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{15,7}   & \multicolumn{1}{l|}{9,32}  & \multicolumn{1}{l|}{157}    & \multicolumn{1}{l|}{0,200924} & \multicolumn{1}{l|}{0,002817} &  & 55,4       & 7,44     & 554       & 0,037977    & 0,002844    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{15,6}   & \multicolumn{1}{l|}{9,46}  & \multicolumn{1}{l|}{156}    & \multicolumn{1}{l|}{0,202417} & \multicolumn{1}{l|}{0,002844} &  & 52,8       & 7,72     & 528       & 0,045293    & 0,002898    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{15,4}   & \multicolumn{1}{l|}{9,59}  & \multicolumn{1}{l|}{154}    & \multicolumn{1}{l|}{0,205432} & \multicolumn{1}{l|}{0,002898} &  & 49,9       & 8,03     & 499       & 0,053891    & 0,002926    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{15,3}   & \multicolumn{1}{l|}{9,69}  & \multicolumn{1}{l|}{153}    & \multicolumn{1}{l|}{0,206954} & \multicolumn{1}{l|}{0,002926} &  & 47,4       & 8,32     & 474       & 0,061715    & 0,003011    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{15}     & \multicolumn{1}{l|}{9,88}  & \multicolumn{1}{l|}{150}    & \multicolumn{1}{l|}{0,211581} & \multicolumn{1}{l|}{0,003011} &  & 45,3       & 8,61     & 453       & 0,068612    & 0,003069    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{14,8}   & \multicolumn{1}{l|}{10}    & \multicolumn{1}{l|}{148}    & \multicolumn{1}{l|}{0,214717} & \multicolumn{1}{l|}{0,003069} &  & 43,1       & 8,91     & 431       & 0,076189    & 0,003099    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{14,7}   & \multicolumn{1}{l|}{10,11} & \multicolumn{1}{l|}{147}    & \multicolumn{1}{l|}{0,216301} & \multicolumn{1}{l|}{0,003099} &  & 43,1       & 9,22     & 431       & 0,076189    & 0,003099    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{14,7}   & \multicolumn{1}{l|}{10,2}  & \multicolumn{1}{l|}{147}    & \multicolumn{1}{l|}{0,216301} & \multicolumn{1}{l|}{0,003099} &  & 40         & 9,54     & 400       & 0,087551    & 0,003099    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{14,7}   & \multicolumn{1}{l|}{10,34} & \multicolumn{1}{l|}{147}    & \multicolumn{1}{l|}{0,216301} & \multicolumn{1}{l|}{0,003099} &  & 39,4       & 9,81     & 394       & 0,089851    & 0,003069    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{14,8}   & \multicolumn{1}{l|}{10,41} & \multicolumn{1}{l|}{148}    & \multicolumn{1}{l|}{0,214717} & \multicolumn{1}{l|}{0,003069} &  & 30,9       & 10,05    & 309       & 0,126839    & 0,00304     \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{14,9}   & \multicolumn{1}{l|}{10,54} & \multicolumn{1}{l|}{149}    & \multicolumn{1}{l|}{0,213144} & \multicolumn{1}{l|}{0,00304}  &  & 39,1       & 10,2     & 391       & 0,091014    & 0,003011    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{15}     & \multicolumn{1}{l|}{10,65} & \multicolumn{1}{l|}{150}    & \multicolumn{1}{l|}{0,211581} & \multicolumn{1}{l|}{0,003011} &  & 39,4       & 10,31    & 394       & 0,089851    & 0,002968    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{15,15}  & \multicolumn{1}{l|}{10,76} & \multicolumn{1}{l|}{151,5}  & \multicolumn{1}{l|}{0,209256} & \multicolumn{1}{l|}{0,002968} &  & 39,6       & 10,43    & 396       & 0,08908     & 0,002954    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{15,2}   & \multicolumn{1}{l|}{10,85} & \multicolumn{1}{l|}{152}    & \multicolumn{1}{l|}{0,208486} & \multicolumn{1}{l|}{0,002954} &  & 39,9       & 10,51    & 399       & 0,087932    & 0,003378    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{13,8}   & \multicolumn{1}{l|}{11,14} & \multicolumn{1}{l|}{138}    & \multicolumn{1}{l|}{0,231063} & \multicolumn{1}{l|}{0,003378} &  & 40,9       & 10,61    & 409       & 0,084164    & 0,003282    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{14,1}   & \multicolumn{1}{l|}{11,41} & \multicolumn{1}{l|}{141}    & \multicolumn{1}{l|}{0,226038} & \multicolumn{1}{l|}{0,003282} &  & 40,9       & 10,71    & 409       & 0,084164    & 0,003135    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{14,58}  & \multicolumn{1}{l|}{11,7}  & \multicolumn{1}{l|}{145,8}  & \multicolumn{1}{l|}{0,218216} & \multicolumn{1}{l|}{0,003135} &  & 41,2       & 10,83    & 412       & 0,083052    & 0,002983    \\ \cline{1-5} \cline{7-11} 
+\multicolumn{1}{|l|}{15,1}   & \multicolumn{1}{l|}{12,1}  & \multicolumn{1}{l|}{151}    & \multicolumn{1}{l|}{0,210029} & \multicolumn{1}{l|}{0,002983} &  & 41,4       & 10,96    & 414       & 0,082315    & 0           \\ \cline{1-5} \cline{7-11} 
+                             &                            &                             &                               &                               &  & 39,4       & 11,07    & 394       & 0,089851    & 0           \\ \cline{7-11} 
+                             &                            &                             &                               &                               &  & 41,4       & 11,54    & 414       & 0,082315    & 0           \\ \cline{7-11} 
+\end{tabular}
+\end{table}
+
+\end{document}

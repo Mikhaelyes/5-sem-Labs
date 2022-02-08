@@ -1,0 +1,565 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.14)  25 OCT 2021 20:15
+entering extended mode
+**./1_3new.tex
+(1_3new.tex
+LaTeX2e <2021-06-01>
+L3 programming layer <2021-06-01>
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/revtex\revtex4-2.cls
+Document Class: revtex4-2 2020/10/03 4.2e (https://journals.aps.org/revtex/ for
+ documentation)
+ Copyright (c) 2019 American Physical Society.
+ mailto:revtex@aps.org
+ Licensed under the LPPL:
+http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
+ Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
+ Based on work by David Carlisle <david at dcarlisle.demon.co.uk>
+ Version (4.2d,4.2e): Modified by Mark Doyle and Phelype Oleinik
+ .
+ltxutil[2020/10/03 4.2e utilities package (portions licensed from W. E. Baxter 
+web at superscript.com)]
+LaTeX Info: Redefining \@centercr on input line 356.
+Class revtex4-2 Info: Repairing broken LaTeX eqnarray on input line 406.
+\eqncolsep=\skip47
+Class revtex4-2 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfoot
+note on input line 481.
+Class revtex4-2 Info: Repairing broken LateX \@sect on input line 803.
+\intertabularlinepenalty=\count182
+\@tbpen=\count183
+\@arstrutbox@hline=\box50
+Class revtex4-2 Info: Repairing broken LaTeX \@xbitor on input line 1834.
+Class revtex4-2 Info: Making \typeout \long on input line 2099.
+ltxfront[2020/10/03 4.2e frontmatter package (AO,DPC,MD)]
+\c@affil=\count184
+\c@collab=\count185
+\absbox=\box51
+ltxgrid[2020/10/03 4.2e page grid package (portions licensed from W. E. Baxter 
+web at superscript.com)]
+\c@linecount=\count186
+\output@latex=\toks16
+\box@size@1=\box52
+\box@size@2=\box53
+\@protection@box=\box54
+\@topmark@saved=\toks17
+\footins@saved=\box55
+\footins@recovered=\box56
+\column@recovered=\box57
+\pagesofar=\box58
+\footsofar=\box59
+\pagegrid@col=\count187
+Class revtex4-2 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
+ \\  on input line 5665.
+\c@part=\count188
+\c@section=\count189
+\c@subsection=\count190
+\c@subsubsection=\count191
+\c@paragraph=\count192
+\c@subparagraph=\count193
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\c@figure=\count194
+\fbox@1=\box60
+\c@table=\count195
+\fbox@2=\box61
+\c@video=\count196
+\fbox@4=\box62
+\@bibdataout=\write3
+\widetext@top=\box63
+\widetext@bot=\box64
+Class revtex4-2 Info: Selecting society aps on input line 7658.
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/revtex\aps4-2.rtx
+File: aps4-2 2020/10/03 4.2e (https://journals.aps.org/revtex/ for documentatio
+n)
+Class revtex4-2 Info: RevTeX society APS selected on input line 40.
+)
+
+Class revtex4-2 Warning: No journal specified, using default pra.
+
+Class revtex4-2 Info: APS journal PRA selected on input line 7661.
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/revtex\aps10pt4-2.rtx
+File: aps10pt4-2 2020/10/03 4.2e (https://journals.aps.org/revtex/ for document
+ation)
+Class revtex4-2 Info: RevTeX pointsize 10pt selected on input line 39.
+)
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/textcase\textcase.sty
+Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
+)
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks18
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2021/04/20 v2.17j AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen138
+)
+LaTeX Info: Redefining \text on input line 28.
+)
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen139
+)
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count197
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count198
+\leftroot@=\count199
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count266
+\DOTSCASE@=\count267
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box65
+\strutbox@=\box66
+\big@size=\dimen140
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count268
+\c@MaxMatrixCols=\count269
+\dotsspace@=\muskip16
+\c@parentequation=\count270
+\dspbrk@lvl=\count271
+\tag@help=\toks20
+\row@=\count272
+\column@=\count273
+\maxfields@=\count274
+\andhelp@=\toks21
+\eqnshift@=\dimen141
+\alignsep@=\dimen142
+\tagshift@=\dimen143
+\tagwidth@=\dimen144
+\totwidth@=\dimen145
+\lineht@=\dimen146
+\@envbody=\toks22
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip53
+\bibsep=\skip54
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count275
+)
+Class revtex4-2 Info: Repairing natbib's \BibitemShut on input line 7665.
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/revtex\revsymb4-2.sty
+Package: revsymb4-2 2020/10/03 4.2e (https://journals.aps.org/revtex/ for docum
+entation)
+LaTeX Info: Redefining \frak on input line 104.
+LaTeX Info: Redefining \Bbb on input line 120.
+LaTeX Info: Redefining \REV@mathfrak on input line 128.
+)) (C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.st
+y
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip55
+\multirow@cntb=\count276
+\multirow@dima=\skip56
+\bigstrutjot=\dimen147
+) (C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks24
+)
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
+) (C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/tools\dcolumn.sty
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
+\col@sep=\dimen150
+\ar@mcellbox=\box67
+\extrarowheight=\dimen151
+\NC@list=\toks25
+\extratabsurround=\skip57
+\backup@length=\skip58
+\ar@cellbox=\box68
+))
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty
+Package: bm 2021/04/25 v1.2e Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+LaTeX Info: Redefining \bm on input line 218.
+)
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks26
+\inpenc@posthook=\toks27
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/ucs\utf8x.def
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+))
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/ucs\ucs.sty
+Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/ucs\uni-global.def
+File: uni-global.def 2013/05/13 UCS: Unicode global data
+)
+\uc@secondtry=\count277
+\uc@combtoks=\toks28
+\uc@combtoksb=\toks29
+\uc@temptokena=\toks30
+)
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2021/06/02 3.60 The Babel package
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
+File: babel.def 2021/06/02 3.60 Babel common definitions
+\babel@savecnt=\count278
+\U@D=\dimen152
+\l@unhyphenated=\language79
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count279
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/babel-russian\russianb.
+ldf
+File: russianb.ldf 2021/01/10 1.3m Russian support for the Babel system
+Language: russian 2020/09/09 1.3k Russian support for the Babel system
+
+
+Package babel Warning: No Cyrillic font encoding has been loaded so far.
+(babel)                A font encoding should be declared before babel.
+(babel)                Default `T2A' encoding will be loaded  on input line 78.
+
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2aenc.def
+File: t2aenc.def 2005/09/27 v1.0i Cyrillic encoding definition file
+)
+Package babel Info: Making " an active character on input line 124.
+Package babel Info: Default for \cyrdash is provided on input line 163.
+))
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
+\UL@box=\box69
+\UL@hyphenbox=\box70
+\UL@skip=\skip59
+\UL@hook=\toks31
+\UL@height=\dimen153
+\UL@pe=\count280
+\UL@pixel=\dimen154
+\ULC@box=\box71
+Package: ulem 2019/11/18
+\ULdepth=\dimen155
+)
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithmic.
+sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+ (C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@ALC@unique=\count281
+\c@ALC@line=\count282
+\c@ALC@rem=\count283
+\c@ALC@depth=\count284
+\ALC@tlm=\skip60
+\algorithmicindent=\skip61
+)
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen156
+\captionmargin@=\dimen157
+\captionwidth=\dimen158
+\caption@tempdima=\dimen159
+\caption@indent=\dimen160
+\caption@parindent=\dimen161
+\caption@hangindent=\dimen162
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\par \vskip \abovecapti
+onskip \begingroup \small \rmfamily \sbox \@tempboxa {\let \\\heading@cr \@make
+@capt@title {#1}{#2}}\@ifdim {\wd \@tempboxa >\hsize }{\begingroup \samepage \f
+lushing \let \footnote \@footnotemark@gobble \@make@capt@title {#1}{#2}\par \en
+dgroup }{\global \@minipagefalse \hb@xt@ \hsize {\hfil \unhbox \@tempboxa \hfil
+ }}\endgroup \vskip \belowcaptionskip  on input line 1139.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count285
+\c@continuedfloat=\count286
+)
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+\c@subfigure=\count287
+\c@subtable=\count288
+) (C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks32
+\minrowclearance=\skip62
+)
+\rownum=\count289
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+Class revtex4-2 Info: colortbl package is loaded. (Proceeding with fingers cros
+sed.) on input line 62.
+Class revtex4-2 Info: cite was not loaded (OK!) on input line 62.
+Class revtex4-2 Info: mcite was not loaded (OK!) on input line 62.
+Class revtex4-2 Info: multicol was not loaded (OK!) on input line 62.
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count290
+\l__pdf_internal_box=\box72
+) (1_3new.aux)
+\openout1 = `1_3new.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 62.
+LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 6
+2.
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2acmr.fd
+File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
+LaTeX Font Info:    ... okay on input line 62.
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count291
+\scratchdimen=\dimen163
+\scratchbox=\box73
+\nofMPsegments=\count292
+\nofMParguments=\count293
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count294
+\MPscratchDim=\dimen164
+\MPnumerator=\count295
+\makeMPintoPDFobject=\count296
+\everyMPtoPDFconversion=\toks34
+)
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+)) (C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/ucs\ucsencs.def
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+LaTeX Info: Redefining \th on input line 62.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+\openout3 = `1_3newNotes.bib'.
+
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/ucs\uni-4.def
+File: uni-4.def 2013/05/13 UCS: Unicode data U+0400..U+04FF
+)
+
+Class revtex4-2 Warning: Assuming \noaffiliation for collaboration.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 97.
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 97.
+
+
+(C:\Users\mikle\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 3460) in paragraph at lines 106--107
+[]\T2A/cmr/m/n/10 Ѕудем счи-тать, что элек-трон рас-се-и-ва-ет-с€ на
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--126
+
+ []
+
+[1{C:/Users/mikle/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 3189) in paragraph at lines 166--167
+\T2A/cmr/m/n/10 ле-на сле-ду-ю-щим об-ра-зом. Ћампа-тиратрон “√«-
+ []
+
+<3.png, id=20, 585.68813pt x 252.19218pt>
+File: 3.png Graphic file (type png)
+<use 3.png>
+Package pdftex.def Info: 3.png  used on input line 170.
+(pdftex.def)             Requested size: 263.55722pt x 113.48543pt.
+
+Overfull \hbox (17.55722pt too wide) in paragraph at lines 170--171
+ [][] 
+ []
+
+<4.png, id=22, 662.475pt x 234.1247pt>
+File: 4.png Graphic file (type png)
+<use 4.png>
+Package pdftex.def Info: 4.png  used on input line 175.
+(pdftex.def)             Requested size: 231.86972pt x 81.94485pt.
+<5.png, id=23, 396.7322pt x 229.60782pt>
+File: 5.png Graphic file (type png)
+<use 5.png>
+Package pdftex.def Info: 5.png  used on input line 181.
+(pdftex.def)             Requested size: 178.52783pt x 103.32256pt.
+[2 <./3.png> <./4.png> <./5.png>]
+<1.jpg, id=31, 1075.01625pt x 625.33624pt>
+File: 1.jpg Graphic file (type jpg)
+<use 1.jpg>
+Package pdftex.def Info: 1.jpg  used on input line 200.
+(pdftex.def)             Requested size: 537.50682pt x 312.66736pt.
+
+Overfull \hbox (291.50682pt too wide) in paragraph at lines 200--201
+ [][] 
+ []
+
+[3 <./1.jpg>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 208.
+
+<2.jpg, id=35, 1075.01625pt x 625.33624pt>
+File: 2.jpg Graphic file (type jpg)
+<use 2.jpg>
+Package pdftex.def Info: 2.jpg  used on input line 209.
+(pdftex.def)             Requested size: 537.50682pt x 312.66736pt.
+
+Overfull \hbox (291.50682pt too wide) in paragraph at lines 209--210
+ [][] 
+ []
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 216.
+
+
+Overfull \hbox (94.8646pt too wide) in paragraph at lines 217--284
+ []$[]$ 
+ []
+
+No file 1_3new.bbl.
+[4 <./2.jpg>] [5] (1_3new.aux) ) 
+Here is how much of TeX's memory you used:
+ 9038 strings out of 478864
+ 127609 string characters out of 2848660
+ 613555 words of memory out of 3000000
+ 26823 multiletter control sequences out of 15000+600000
+ 420674 words of font info for 73 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 71i,11n,80p,2416b,685s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\mikle\AppData\Local\MiKTeX\fonts/pk/
+ljfour/lh/lh-t2a/dpi600\larm0700.pk> <C:\Users\mikle\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\mikle\AppData\Local\MiKTeX
+\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1000.pk> <C:\Users\mikle\AppData\Local\Mi
+KTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx0900.pk> <C:\Users\mikle\AppData\Loca
+l\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0900.pk> <C:\Users\mikle\AppData\
+Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati0900.pk> <C:\Users\mikle\AppD
+ata\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:\Users\mikle\
+AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk><C:/Users/mik
+le/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
+Users/mikle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb><C:/Users/mikle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmmi7.pfb><C:/Users/mikle/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmmi9.pfb><C:/Users/mikle/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmr10.pfb><C:/Users/mikle/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/mikle/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/mikle/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mikle/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/mikle/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on 1_3new.pdf (5 pages, 504493 bytes).
+PDF statistics:
+ 344 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+
